@@ -8,6 +8,7 @@
 
 #body{
     font-family: 'Roboto Flex',sans-serif;
+    font-size: 1rem;
     background-repeat: repeat;
     background-image: 
     linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
@@ -26,7 +27,7 @@
 
 #header {
     display: grid;
-    grid-template-columns: 3fr 6fr 3fr;
+    grid-template-columns: 2.5fr 7fr 2.5fr;
     gap: 10px;
     background-color: #E63946;
     padding: 10px;
@@ -37,12 +38,10 @@
 #header > div, #header nav {
     display: flex;
     align-items: center;
-    justify-content: center;
     padding: 10px;
 }
 
 .buscador-form {
-    width: 100%;
     background-color: white;
     border-radius: 5px;
 }
@@ -88,14 +87,14 @@
 #header > nav > ul {
     display: flex;
     list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
 }
 
 #header > nav > ul > li {
-    width: 100%;
     padding: 5px 0;
     text-align: center;
-
 }
 
 #header > nav > ul > li > a {
@@ -108,8 +107,39 @@
     padding: 5px 0;
 }
 
+.moneda-usuario, .moneda-usuario div {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.select-moneda {
+    font-family: inherit;
+    font-size: 1rem;
+    color: #003366;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.select-moneda option {
+    background-color: white;
+    color: #003366;
+}
+
 .actual {
+    font-weight: bold;
     text-decoration: underline;
+}
+
+.marca {
+    font-size: 1.2rem;
 }
 
 #main {
@@ -154,24 +184,31 @@
 .links, .redes {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:space-around;
     font-size: 1rem;
-    border: 1px solid white;
 }
 
 .links ul, .redes ul {
     list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 
 .links ul li a {
-    text-decoration: none;
+    text-decoration: underline;
     color: white;
 }
-.redes ul li a img {
-    width: 40px;
-    height: 40px;
+
+.redes ul {
+    justify-content: flex-end;
 }
 
-.links ul, .links ul li, .links ul li a, .redes ul, .redes ul li, .redes ul li a {
-    border: 1px solid white;
+.redes ul li {
+    padding-left: 20px;
+}
+
+.redes ul li a img, #header .moneda-usuario img {
+    width: 45px;
+    height: 45px;
 }
