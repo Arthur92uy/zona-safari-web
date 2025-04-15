@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#body{
+    height: 100%;
+    font-family: 'Roboto Flex',sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+#header {
+    display: grid;
+    grid-template-columns: 3fr 6fr 3fr;
+    gap: 10px;
+    background-color: #E63946;
+    padding: 10px;
+    color: white;
+}
+
+#header > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.buscador-form {
+    width: 100%;
+    background-color: white;
+
+    border-radius: 5px;
+}
+
+.input-con-boton {
+    display: flex;
+    overflow: hidden;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.input-con-boton input[type="search"] {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+    font-family: inherit;
+    font-weight: 400;
+    color: #003366;
+}
+.input-con-boton button {
+    background-color: #E63946;
+    border: 1px solid white;
+    padding: 0 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+}
+
+.input-con-boton button:hover,
+.input-con-boton button:focus,
+.input-con-boton button:active {
+    outline: none;
+    box-shadow: none;
+}
+
+#header > div > ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+}
+
+#header > div > ul > li {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+}
+
+#header > div > ul > li > a{
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actual {
+    text-decoration: underline;
+}
+
+#main {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+.noticias, .destacados {
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.noticias {
+    background-color: #E3B448;
+}
+
+.destacados {
+    background-color: #003366;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    gap: 10px;
+}
+
+.links, .redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
