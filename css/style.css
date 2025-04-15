@@ -7,14 +7,21 @@
 }
 
 #body{
-    height: 100%;
     font-family: 'Roboto Flex',sans-serif;
+    background-repeat: repeat;
+    background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+    url('../images/background-151.jpg');
+
 }
 
 .container {
     display: grid;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 #header {
@@ -24,27 +31,25 @@
     background-color: #E63946;
     padding: 10px;
     color: white;
+    border-radius: 5px;
 }
 
-#header > div {
+#header > div, #header nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
     padding: 10px;
 }
 
 .buscador-form {
     width: 100%;
     background-color: white;
-
     border-radius: 5px;
 }
 
 .input-con-boton {
     display: flex;
     overflow: hidden;
-    background-color: transparent;
     border-radius: 5px;
 }
 
@@ -54,8 +59,6 @@
     padding: 10px;
     font-size: 1rem;
     outline: none;
-    font-family: inherit;
-    font-weight: 400;
     color: #003366;
 }
 .input-con-boton button {
@@ -82,25 +85,27 @@
     box-shadow: none;
 }
 
-#header > div > ul {
+#header > nav > ul {
     display: flex;
     list-style: none;
     width: 100%;
 }
 
-#header > div > ul > li {
+#header > nav > ul > li {
     width: 100%;
-    height: 30px;
+    padding: 5px 0;
     text-align: center;
+
 }
 
-#header > div > ul > li > a{
+#header > nav > ul > li > a {
     color: white;
     text-decoration: none;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5px 0;
 }
 
 .actual {
@@ -111,8 +116,10 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 10px;
-    padding: 10px;
-    background-color: white;
+    padding: 10px 0;
+    background-color: transparent;
+    max-width: 1200px;
+
 }
 
 .noticias, .destacados {
@@ -135,10 +142,13 @@
 #footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: #222;
+    background-color: #E63946;
     color: white;
     padding: 20px;
     gap: 10px;
+    border: 1px solid white;
+    max-width: 1200px;
+    border-radius: 5px;
 }
 
 .links, .redes {
@@ -146,4 +156,22 @@
     align-items: center;
     justify-content: center;
     font-size: 1rem;
+    border: 1px solid white;
+}
+
+.links ul, .redes ul {
+    list-style: none;
+}
+
+.links ul li a {
+    text-decoration: none;
+    color: white;
+}
+.redes ul li a img {
+    width: 40px;
+    height: 40px;
+}
+
+.links ul, .links ul li, .links ul li a, .redes ul, .redes ul li, .redes ul li a {
+    border: 1px solid white;
 }

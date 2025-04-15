@@ -4,64 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Inicio - Zona Safari</title>
+    <title>Inicio - TCG SAFARI</title>
 </head>
 <body id="body">
 
     <div class="container">
-
-        <header id=header>
+        <header id="header">
             <div class="buscador">
                 <form class="buscador-form" role="search">
                     <label for="buscar" class="visually-hidden">Buscar</label>
                     <div class="input-con-boton">
                         <input type="search" id="buscar" name="buscar" placeholder="Pika..." aria-label="Buscar">
                         <button type="submit" aria-label="Buscar">
-                            <img src="/images/magnifying-glass-solid.svg" alt="" width="20" height="20">
+                            <img src="./images/magnifying-glass-solid.svg" alt="" width="20" height="20">
                         </button>
                     </div>
                 </form>
             </div>
-            <div class="navbar">
+            <nav>
                 <ul>
                     <li>
-                        <a href="/pages/catalogo.html">
+                        <a href="./pages/catalogo.html">
                             Catálogo
                         </a>
                     </li>
                     <li>
-                        <a href="/pages/ofertas.html">
+                        <a href="./pages/ofertas.html">
                             Ofertas
                         </a>
                     </li>
                     <li class="actual">
-                        <a href="/index.html">
-                            ZONA SAFARI
+                        <a href="./index.html">
+                            TCG SAFARI
                         </a>
                     </li>
                     <li>
-                        <a href="/pages/contacto.html">
+                        <a href="./pages/contacto.html">
                             Contacto
                         </a>
                     </li>
                     <li>
-                        <a href="/pages/nosotros.html">
+                        <a href="./pages/nosotros.html">
                             Nosotros
                         </a>
                     </li>
                 </ul>
-            </div>
+            </nav>
             <div class="usuario">👤 Usuario / Moneda</div>
         </header>
 
         <main id="main">
-            <div class="noticias">📰 Noticias</div>
-            <div class="destacados">⭐ Destacados</div>
+            <section class="noticias">📰 Noticias
+            </section>
+            <section class="destacados">⭐ Destacados</section>
         </main>
 
         <footer id="footer">
-            <div class="links">🔗 Enlaces útiles</div>
-            <div class="redes">📱 Redes sociales</div>
+
+            <section class="links">
+                <h2>Sitios de Interés</h2>
+            <ul>
+                <li><a href="https://www.xuruguay.com.uy/" target="_blank" rel="noopener noreferrer">XUruguay</a></li>
+                <li><a href="https://mornarstore.com/index.php" target="_blank" rel="noopener noreferrer">MornarStore</a></li>
+                <li><a href="https://guaridacorp.com/" target="_blank" rel="noopener noreferrer">Guarida Corp.</a></li>
+            </ul>
+            </section>
+
+            <section class="redes">
+                <h2>Redes Sociales</h2>
+                <ul>
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="./images/square-instagram-brands-solid.svg" alt="" loading="lazy"></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="./images/square-facebook-brands-solid.svg" alt="" loading="lazy"></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="./images/square-youtube-brands-solid.svg" alt="" loading="lazy"></a></li>
+                </ul>
+            </section>
+
         </footer>
 
     </div>
