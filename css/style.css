@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-#body{
+.body{
     font-family: 'Roboto Flex',sans-serif;
     font-size: 1rem;
     background-repeat: repeat;
@@ -14,21 +14,22 @@
     linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
     url('../images/background-151.jpg');
     color: white;
+    height: 100%;
 }
 
 .container {
     display: grid;
     grid-template-rows: auto 1fr auto;
     width: 100%;
+    min-height: 100vh;
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
 }
 
-
 /* Estilos del header y sus componentes */
 
-#header {
+.header {
     display: grid;
     grid-template-columns: 2.5fr 7fr 2.5fr;
     gap: 10px;
@@ -42,30 +43,31 @@
     z-index: 10;
 }
 
-#header.expandido {
+.header.expandido {
     height: auto;
     overflow: visible;
 }
 
 #toggle-header {
     display: none;
-    background: none;
+    /* background: none;
     border: none;
     font-size: 2rem;
     color: white;
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 10px; */
 }
 
-#header > div, #header nav {
+.header > div, .header nav {
     display: flex;
     align-items: center;
     padding: 10px;
 }
 
-.buscador-form {
+.buscador-form, .formato-input, select.formato-input {
     background-color: white;
     border-radius: 5px;
+    border: white;
 }
 
 .input-con-boton {
@@ -82,7 +84,7 @@
     outline: none;
     color: #003366;
 }
-.input-con-boton button {
+.input-con-boton button, .button1 input, .button2 input, .buscador button {
     background-color: #E63946;
     border: 1px solid white;
     padding: 0 10px;
@@ -91,6 +93,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    color:white;
 }
 
 .visually-hidden {
@@ -105,7 +108,7 @@
     box-shadow: none;
 }
 
-#header > nav > ul {
+.header > nav > ul {
     display: flex;
     list-style: none;
     align-items: center;
@@ -113,12 +116,12 @@
     width: 100%;
 }
 
-#header > nav > ul > li {
+.header > nav > ul > li {
     padding: 5px 0;
     text-align: center;
 }
 
-#header > nav > ul > li > a {
+.header > nav > ul > li > a {
     color: white;
     text-decoration: none;
     height: 100%;
@@ -143,7 +146,7 @@
     border: 1px solid white;
     border-radius: 5px;
     padding: 10px;
-    height: 40px;
+    height: 38px;
     outline: none;
     cursor: pointer;
     margin: 0 10px;
@@ -163,25 +166,14 @@
     font-size: 1.2rem;
 }
 
+/* Estilos del main index y sus componentes */
 
-/* Estilos del main y sus componentes */
-
-#main {
+.main {
     display: grid;
     grid-template-rows: auto 1fr 1fr;
     gap: 10px;
     padding: 10px 0;
     background-color: transparent;
-}
-
-.noticias, .destacados {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    border: 1px solid black;
 }
 
 .banner {
@@ -220,6 +212,17 @@
 .banner .span2 {
     top: 55%;
 }
+.noticias, .destacados, .contenedor-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+
 
 .noticias {
     background-color: #E3B448;
@@ -305,9 +308,10 @@ iframe {
 }
 
 
+
 /* Estilos del footer y sus componentes */
 
-#footer {
+.footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #E63946;
@@ -350,28 +354,131 @@ iframe {
     height: 45px;
 }
 
+/* Estilos del main contacto y sus componentes */
+
+.main-contacto {
+    grid-template-rows: auto 1fr;
+}
+
+.contenedor-contacto {
+    background-color: #003366;
+    padding: 20px;
+    justify-content: flex-start;
+}
+
+.formulario {
+    display: grid;
+    grid-template-areas: 
+    'label1 text1 label2 text2'
+    'label3 text3 label4 text4'
+    'label5 text5 text5 text5'
+    'button1 button1 button2 button2';
+    gap: 30px;
+    padding: 20px;
+}
+
+.label1 {
+    grid-area: label1;
+}
+
+.label2 {
+    grid-area: label2;
+}
+
+.label3 {
+    grid-area: label3;
+}
+
+.label4 {
+    grid-area: label4;
+}
+
+.label5 {
+    grid-area: label5;
+}
+
+.text1 {
+    grid-area: text1;
+}
+
+.text2 {
+    grid-area: text2;
+}
+
+.text3 {
+    grid-area: text3;
+}
+
+.text4 {
+    grid-area: text4;
+}
+
+.text5 {
+    grid-area: text5;
+}
+
+
+fieldset section {
+    display: flex;
+    align-items: center;
+}
+
+.button1 {
+    grid-area: button1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 10px 10px 10px;
+}
+
+.button2 {
+    grid-area: button2;
+    justify-content: flex-start;
+    padding: 0 10px 10px 10px;
+}
+
+.button1 input, .button2 input{
+    height: 38px;
+    width: 100px;
+    font-size: 1rem;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.formato-input, select.formato-input {
+    width: 100%;
+    height: 22px;
+    color: #003366;
+    font-size: 1rem;
+}
+
+.formato-input-textarea {
+    height:100%;
+}
+
+.formulario {
+    border: none;
+}
 /* Media Querys */
 
 @media (max-width: 430px) {
 
     /* === BODY === */
-    #body {
+    .body {
         overflow-x: hidden;
         border: 1px solid black;
     }
 
     /* === HEADER === */
-    #header {
+    .header {
         top: 0px;
         grid-template-columns: 1fr;
         overflow-y: hidden;
         transition: height 1s ease;
     }
-    #header.expandido {
+    .header.expandido {
         height: auto;
     }
 
-    #header.expandido .menu-opciones, #header.expandido .moneda-usuario {
+    .header.expandido .menu-opciones, .header.expandido .moneda-usuario {
         display: flex;
     }
 
@@ -399,22 +506,22 @@ iframe {
         margin: 0 auto;
     }
 
-    #header > div, #header > nav {
+    .header > div, .header > nav {
         align-items: flex-start;
         padding: 5px;
     }
 
-    #header > nav > ul {
+    .header > nav > ul {
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
     }
-    #header .menu-opciones, #header .moneda-usuario {
+    .header .menu-opciones, .header .moneda-usuario {
         display: none;
     }
 
     /* === MAIN === */
-    #main {
+    .main {
         grid-template-rows: auto;
     }
 
@@ -487,7 +594,7 @@ iframe {
     }
 
     /* === FOOTER === */
-    #footer {
+    .footer {
         grid-template-columns: 1fr;
         padding: 10px;
     }
@@ -510,5 +617,20 @@ iframe {
     .redes ul li {
         padding: 0;
         justify-content: center;
+    }
+
+/* Formulario de contacto */
+
+    .formulario {
+        grid-template-areas: 
+        'label1 text1'
+        'label2 text2'
+        'label3 text3'
+        'label4 text4'
+        'label5 text5'
+        'button1 button2';
+    }
+    .label1, .label2, .label3, .label4, .label5 {
+        text-align: start;
     }
 }

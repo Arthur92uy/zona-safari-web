@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Contacto - TCG SAFARI</title>
 </head>
-<body id="body">
+<body class="body">
 
     <div class="container">
-        <header id="header">
+        <header class="header">
             <div class="buscador">
                 <form class="buscador-form" role="search">
                     <label for="buscar" class="visually-hidden">Buscar</label>
@@ -64,14 +64,71 @@
                         <option value="UYU">UYU</option>
                     </select>
                 </div>
-                <img src="../images/circle-user-regular.svg" alt="Avatar de usuario" loading="lazy">
+                <img src="../images/circle-user-regular.svg" alt="Avatar de usuario" loading="lazy" width="38" height="38">
             </div>
         </header>
 
-        <main id="main">
+        <main class="main main-contacto">
+            <section class="banner">
+                <img src="../images/banner_pokemon.webp" alt="" loading="lazy">
+                <span class="span1">TCG SAFARI</span>
+                <span class="span2">El lugar donde puedes atraparlos a todos!</span>
+            </section>
+            <div class="contenedor-contacto">
+                <div class="titulo debugg">
+                    <h1>Formulario de contacto</h1>
+                </div>
+                <form action="" method="POST" class="form">
+                    <fieldset class="formulario">
+                        <section class="label1">
+                            <label for="email">Correo electronico:</label>
+                        </section>
+                        <section class="text1">
+                            <input type="email" id="email" name="email" class="formato-input">
+                        </section>
+                        <section class="label2">
+                            <label for="nombre">Nombre completo:</label>
+                        </section>
+                        <section class="text2">
+                            <input type="text" id="nombre" name="nombre" class="formato-input">
+                        </section>
+                        <section class="label3">
+                            <label for="categoria">Categoria:</label>
+                        </section>
+                        <section class="text3">
+                            <select name="categoria" id="categoria" class="formato-input">
+                                <option value="" selected disabled>Elija una categoria</option>
+                                <option value="cuenta">Cuenta</option>
+                                <option value="web">Web</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </section>
+                        <section class="label4">
+                            <label for="celular">Celular de contacto:</label>
+                        </section>
+                        <section class="text4">
+                            <input type="text" id="celular" name="celular" pattern="09[0-9]{7}" maxlength="9" placeholder="099XXXXXX" inputmode="numeric" title="El número debe comenzar con 09 y contener un maximo de 9 digitos en total." class="formato-input">
+                        </section>
+                        <section class="label5">
+                            <label for="consulta">Consulta:</label>
+                        </section>
+                        <section class="text5">
+                            <textarea id="consulta" name="consulta" rows="6" placeholder="Escribe tu consulta aqui..." class="formato-input formato-input-textarea"></textarea>
+                        </section>
+                        <section class="button1">
+                            <input type="submit" value="Enviar">
+                        </section>
+                        <section class="button2">
+                            <input type="reset" value="Limpiar">
+                        </section>
+                    </fieldset>
+                </form>
+                
+            </div>
+
         </main>
 
-        <footer id="footer">
+        <footer class="footer">
 
             <section class="links">
                 <h2>Sitios de Interés</h2>
@@ -90,9 +147,8 @@
                     <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="../images/square-youtube-brands-solid.svg" alt="" loading="lazy"></a></li>
                 </ul>
             </section>
-            <!-- aca poner un registered -->
         </footer>
-
+        <script src="../js/script.js"></script>
     </div>
 
 </body>
