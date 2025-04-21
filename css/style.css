@@ -231,6 +231,7 @@
 .titulo {
     text-decoration: underline;
     padding-top: 10px;
+    text-align: center;
 }
 iframe {
     border: 1px solid black;
@@ -631,6 +632,8 @@ fieldset section {
         'button1 button2';
     }
     .label1, .label2, .label3, .label4, .label5 {
-        text-align: start;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
+    
 }
