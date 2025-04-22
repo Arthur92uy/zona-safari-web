@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Ofertas - TCG SAFARI</title>
 </head>
-<body id="body">
+<body class="body">
 
     <div class="container">
-        <header id="header">
+        <header class="header">
             <div class="buscador">
                 <form class="buscador-form" role="search">
                     <label for="buscar" class="visually-hidden">Buscar</label>
@@ -23,15 +23,15 @@
                     </div>
                 </form>
             </div>
-            <nav>
+            <nav class="menu-opciones">
                 <ul>
                     <li>
-                        <a href="../pages/catalogo.html">
+                        <a href="./catalogo.html">
                             Catálogo
                         </a>
                     </li>
                     <li class="actual">
-                        <a href="../pages/ofertas.html">
+                        <a href="./ofertas.html">
                             <img src="../images/favicon-32x32.png" alt="" loading="lazy" width="16" height="16">
                             Ofertas
                         </a>
@@ -42,12 +42,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="../pages/contacto.html">
+                        <a href="./contacto.html">
                             Contacto
                         </a>
                     </li>
                     <li>
-                        <a href="../pages/nosotros.html">
+                        <a href="./nosotros.html">
                             Nosotros
                         </a>
                     </li>
@@ -61,14 +61,19 @@
                         <option value="UYU">UYU</option>
                     </select>
                 </div>
-                <img src="../images/circle-user-regular.svg" alt="Avatar de usuario" loading="lazy">
+                <img src="../images/circle-user-regular.svg" alt="Avatar de usuario" loading="lazy" width="38" height="38">
             </div>
         </header>
 
-        <main id="main">
+        <main class="main">
+            <section class="banner">
+                <img src="../images/banner_pokemon.webp" alt="" loading="lazy">
+                <span class="span1">TCG SAFARI</span>
+                <span class="span2">El lugar donde puedes atraparlos a todos!</span>
+            </section>
         </main>
 
-        <footer id="footer">
+        <footer class="footer">
 
             <section class="links">
                 <h2>Sitios de Interés</h2>
@@ -91,6 +96,6 @@
         </footer>
 
     </div>
-
+    <script src="../js/script.js"></script>
 </body>
 </html>
