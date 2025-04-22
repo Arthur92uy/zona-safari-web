@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./images/favicon-32x32.png" type="image/x-icon">
-    <link rel="shortcut icon" href="../images/favicon-32x32.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../images/favicon-32x32.png" type="image/x-icon">
+        <link rel="shortcut icon" href="../images/favicon-32x32.png" type="image/x-icon">
+        <link rel="stylesheet" href="../css/style.css">
+        
     <title>Nosotros - TCG SAFARI</title>
-</head>
-<body id="body">
+    </head>
+    <body class="body">
 
     <div class="container">
-        <header id="header">
+        <header class="header">
             <div class="buscador">
                 <form class="buscador-form" role="search">
                     <label for="buscar" class="visually-hidden">Buscar</label>
@@ -22,8 +23,11 @@
                         </button>
                     </div>
                 </form>
+                <button id="toggle-header" aria-label="Expandir menú">
+                    <img src="../images/bars-solid.svg" alt="" width="30" height="30">
+                </button>
             </div>
-            <nav>
+            <nav class="menu-opciones">
                 <ul>
                     <li>
                         <a href="../pages/catalogo.html">
@@ -61,14 +65,19 @@
                         <option value="UYU">UYU</option>
                     </select>
                 </div>
-                <img src="../images/circle-user-regular.svg" alt="Avatar de usuario" loading="lazy">
+                <img src="../images/circle-user-regular.svg" alt="Avatar de usuario" loading="lazy" width="38" height="38">
             </div>
         </header>
 
-        <main id="main">
+        <main class="main">
+            <section class="banner">
+                <img src="../images/banner_pokemon.webp" alt="" loading="lazy">
+                <span class="span1">TCG SAFARI</span>
+                <span class="span2">El lugar donde puedes atraparlos a todos!</span>
+            </section>
         </main>
 
-        <footer id="footer">
+        <footer class="footer">
 
             <section class="links">
                 <h2>Sitios de Interés</h2>
