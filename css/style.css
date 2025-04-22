@@ -543,7 +543,6 @@ fieldset section {
 
     .header.expandido {
         max-height: 500px;
-        position: fixed;
     }
 
     .header.expandido .menu-opciones, .header.expandido .moneda-usuario {
