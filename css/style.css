@@ -7,12 +7,12 @@
 }
 html, body {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     font-size: 1rem;
     font-family: 'Roboto Flex',sans-serif;
     color: white;
 }
-.body{
+.body, .catalogo{
     background-repeat: repeat;
     background-image: 
     linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
@@ -81,7 +81,7 @@ html, body {
     outline: none;
     color: #003366;
 }
-.input-con-boton button, .button1 input, .button2 input, .buscador button {
+.input-con-boton button, .button1 input, .button2 input, .buscador button, .producto div button {
     background-color: #E63946;
     border: 1px solid white;
     padding: 0 10px;
@@ -213,7 +213,7 @@ html, body {
 .banner .span2 {
     top: 55%;
 }
-.noticias, .destacados, .contenedor-contacto, .contenedor-nosotros {
+.noticias, .destacados, .contenedor-contacto, .contenedor-nosotros, .contenedor-catalogo {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -434,7 +434,7 @@ fieldset section {
     padding: 0 10px 10px 10px;
 }
 
-.button1 input, .button2 input{
+.button1 input, .button2 input, .producto div button {
     height: 38px;
     width: 100px;
     font-size: 1rem;
@@ -516,6 +516,49 @@ fieldset section {
     border-radius: 5px;
 }
 
+/* Estilos del main catalogo y sus componentes */
+
+.main-catalogo {
+    grid-template-rows: auto 1fr;
+    font-size: 1rem;
+}
+
+.contenedor-catalogo {
+    background-color: #E63946;
+    padding: 20px;
+    justify-content: flex-start;
+    color: white;
+}
+
+.catalogo {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    max-height: calc(350px*3);
+    overflow-y:scroll;
+
+}
+
+.producto {
+
+    display: grid;
+    grid-template-columns: 3fr 2fr 2.5fr 1fr 2.5fr 1fr;
+    width: 100%;
+}
+
+.img-producto {
+    padding: 5px;
+    max-width: 245px;
+    width: auto;
+    max-height: 340px;
+    height: auto;
+}
+
+.producto div {
+    color: #003366;
+    border: 1px solid black;
+}
 /* Media Querys */
 
 @media (max-width: 430px) {
@@ -523,7 +566,6 @@ fieldset section {
     /* === BODY === */
     .body {
         overflow-x: hidden;
-        border: 1px solid black;
     }
 
     /* === HEADER === */
