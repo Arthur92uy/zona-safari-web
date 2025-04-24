@@ -12,7 +12,7 @@ html, body {
     font-family: 'Roboto Flex',sans-serif;
     color: white;
 }
-.body, .catalogo{
+.body{
     background-repeat: repeat;
     background-image: 
     linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
@@ -303,8 +303,9 @@ iframe {
 .contenido-card img {
     width: 95%;
     object-fit: contain;
-    border-radius: 12px;
+    border-radius: 14px;
     box-shadow: 0 0 10px #ffffff;
+    border: 1px solid white;
 }
 
 /* Estilos del footer y sus componentes */
@@ -524,41 +525,73 @@ fieldset section {
 }
 
 .contenedor-catalogo {
-    background-color: #E63946;
+    background-color: #ffffff;
     padding: 20px;
     justify-content: flex-start;
-    color: white;
+    color:#003366;
 }
 
 .catalogo {
+    background-color: #ffffff;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
     width: 100%;
     max-height: calc(350px*3);
     overflow-y:scroll;
-
+    border-radius: 12px;
 }
 
 .producto {
-
+    background-color: #003366;
     display: grid;
-    grid-template-columns: 3fr 2fr 2.5fr 1fr 2.5fr 1fr;
+    grid-template-columns: 2.6fr 3.4fr;
     width: 100%;
+    border: 1px solid black; 
+    border-radius: 12px;
 }
-
+.div-img-producto {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .img-producto {
-    padding: 5px;
-    max-width: 245px;
+    max-width: 255px;
     width: auto;
-    max-height: 340px;
+    max-height: 350px;
     height: auto;
+    border: 1px solid white;
+    border-radius: 14px;
+    box-shadow: 0 0 10px #ffffff;
 }
 
-.producto div {
-    color: #003366;
-    border: 1px solid black;
+.div-detalles-producto {
+    display: grid;
+    grid-template-rows: 0.7fr 4fr 2.2fr 1.1fr;
 }
+
+.nombre-ps {
+    display: flex;
+    text-decoration: underline;
+}
+
+.ataque {
+    max-height: 103px;
+    overflow-y: scroll;
+}
+
+.div-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px 0 0;
+}
+
+.nombre-ps, .detalles, .ataque {
+    color: #ffffff;
+}
+
 /* Media Querys */
 
 @media (max-width: 430px) {
