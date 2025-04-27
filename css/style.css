@@ -81,7 +81,7 @@ html, body {
     outline: none;
     color: #003366;
 }
-.input-con-boton button, .button1 input, .button2 input, .buscador button, .producto div button {
+.input-con-boton button, .button1 input, .button2 input, .buscador button, .div-button button  {
     background-color: #E63946;
     border: 1px solid white;
     padding: 0 10px;
@@ -213,7 +213,7 @@ html, body {
 .banner .span2 {
     top: 55%;
 }
-.noticias, .destacados, .contenedor-contacto, .contenedor-nosotros, .contenedor-catalogo {
+.noticias, .destacados, .contenedor-contacto, .contenedor-nosotros, .contenedor-catalogo, .contenedor-ofertas {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -435,7 +435,7 @@ fieldset section {
     padding: 0 10px 10px 10px;
 }
 
-.button1 input, .button2 input, .producto div button {
+.button1 input, .button2 input, .div-button button {
     height: 38px;
     width: 100px;
     font-size: 1rem;
@@ -531,7 +531,7 @@ fieldset section {
     color:#003366;
 }
 
-.catalogo {
+.catalogo, .ofertas {
     background-color: #ffffff;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -550,6 +550,12 @@ fieldset section {
     border: 1px solid black; 
     border-radius: 12px;
 }
+
+.div-detalles-producto {
+    display: grid;
+    grid-template-rows: 0.7fr 4fr 2.2fr 1.1fr;
+}
+
 .div-img-producto {
     padding: 10px;
     display: flex;
@@ -566,10 +572,7 @@ fieldset section {
     box-shadow: 0 0 10px #ffffff;
 }
 
-.div-detalles-producto {
-    display: grid;
-    grid-template-rows: 0.7fr 4fr 2.2fr 1.1fr;
-}
+
 
 .nombre-ps {
     display: flex;
@@ -588,9 +591,100 @@ fieldset section {
     padding: 0 10px 0 0;
 }
 
+.div-button a {
+    text-decoration: none;
+}
+
 .nombre-ps, .detalles, .ataque {
     color: #ffffff;
 }
+
+
+.main-ofertas {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto;
+    gap: 10px;
+}
+
+.contenedor-ofertas {
+    background-color: #E3B448;
+    background-color: #ffffff;
+    padding: 20px;
+    justify-content: flex-start;
+    color:#003366;
+}
+
+
+.nps-ofertas, .detalles-ofertas, .ataque-ofertas {
+    color: white;
+    border: 1px solid white;
+}
+
+.ofertas {
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+    width: 100%;
+    overflow-y:scroll;
+    border-radius: 12px;
+    background-color: #003366;
+    border: 1px solid white;
+    grid-template-columns: none;
+}
+.div-detalles-producto-ofertas {
+    display: grid;
+    grid-template-rows: 0.7fr 4fr 2.3fr;
+}
+.ofertas-producto {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 2fr 5fr 5fr;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.grafica {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid #ffffff;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.contenedor-tabla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    color: #ffffff;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 5px;
+    width: 100%;
+    margin: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+table td a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+thead th {
+    font-size: 1.5rem;
+}
+
 
 /* Media Querys */
 

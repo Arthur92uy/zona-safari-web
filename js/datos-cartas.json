@@ -1,0 +1,5 @@
+[
+    { "vendedor": "User1", "idioma": "ESP", "estado": "Perfecta","departamento": "Montevideo","barrio": "Centro","precio": "1","venta": "SI","canje": "SI","ofertas": "2","comprar": "<a href=\"\" >Carrito</a>" },
+    { "vendedor": "User2", "idioma": "ING", "estado": "Perfecta","departamento": "Montevideo","barrio": "Cordon","precio": "2","venta": "SI","canje": "SI","ofertas": "1","comprar": "<a href=\"\" >Carrito</a>" },
+    { "vendedor": "User2", "idioma": "ING", "estado": "Excelente","departamento": "Montevideo","barrio": "Cerro","precio": "22","venta": "SI","canje": "NO","ofertas": "1","comprar": "<a href=\"\" >Carrito</a>" }
+    ]

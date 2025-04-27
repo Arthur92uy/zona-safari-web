@@ -22,6 +22,9 @@
                         </button>
                     </div>
                 </form>
+                <button id="toggle-header" aria-label="Expandir menú">
+                    <img src="../images/bars-solid.svg" alt="" width="30" height="30">
+                </button>
             </div>
             <nav class="menu-opciones">
                 <ul>
@@ -65,12 +68,66 @@
             </div>
         </header>
 
-        <main class="main">
+        <main class="main main-ofertas">
             <section class="banner">
                 <img src="../images/banner_pokemon.jpg" alt="" loading="lazy">
                 <span class="span1">TCG SAFARI</span>
                 <span class="span2">El lugar donde puedes atraparlos a todos!</span>
             </section>
+            <div class="contenedor-ofertas">
+                <div class="titulo">
+                    <h1>Ofertas</h1>
+                </div>
+                <div class="ofertas">
+                    <section class="ofertas-producto">
+                        <div class="div-img-producto">
+                            <img class="img-producto" src="../images/SV3pt5_ES_1.png" alt="" loading="lazy">
+                        </div>
+                        <div class="div-detalles-producto-ofertas">
+                            <div class="nombre-ps nps-ofertas">
+                                <h3>Bulbasaur</h3><h3>PS: 70</h3>
+                            </div>
+                            <div class="detalles-ofertas">
+                            <h4>Fase: Básico</h4>
+                            <h4>Expansión:</h4>
+                            <h4>Nro: 001/165</h4>
+                            <h4>Energia: <img src="" alt="" ></h4>
+                            <h4>Debilidad: <img src="" alt="" ></h4>
+                            <h4>Resistencia: <img src="" alt="" ></h4>
+                            <h4>Retirada: <img src="" alt="" ></h4>
+                            <h4>Rareza: Común</h4>
+                            </div>
+                            <div class="ataque-ofertas">
+                                <h4>Ataque: Drenadoras 20</h4>
+                                <p>Cura 20 puntos de dano a este Pokemon.</p>
+                            </div>
+                        </div>
+                        <div class="grafica">
+                            <span>Aqui debe ir una grafica.</span>
+                        </div>
+                    </section>
+                    <div class="contenedor-tabla">
+                        <table id="tabla-cartas">
+                        <thead>
+                            <tr>
+                            <th>Vendedor</th>
+                            <th>Idioma</th>
+                            <th>Estado</th>
+                            <th>Departamento</th>
+                            <th>Barrio</th>
+                            <th>Precio</th>
+                            <th>Venta</th>
+                            <th>Canje</th>
+                            <th>Ofertas</th>
+                            <th>Comprar</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
         </main>
 
         <footer class="footer">
@@ -97,5 +154,6 @@
 
     </div>
     <script src="../js/script.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
 </body>
 </html>
