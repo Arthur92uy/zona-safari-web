@@ -1,0 +1,44 @@
+/* Estilos del footer y sus componentes */
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #E63946;
+    color: white;
+    padding: 20px;
+    gap: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.links, .redes {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    font-size: 1rem;
+}
+
+.links ul, .redes ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.links ul li a {
+    text-decoration: underline;
+    color: white;
+}
+
+.redes ul {
+    justify-content: flex-end;
+}
+
+.redes ul li {
+    padding-left: 20px;
+}
+
+.redes ul li a img, #header .moneda-usuario img {
+    width: 45px;
+    height: 45px;
+}

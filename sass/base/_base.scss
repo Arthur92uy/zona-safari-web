@@ -1,0 +1,13 @@
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    font-size: 1rem;
+    font-family: 'Roboto Flex',sans-serif;
+    color: white;
+}
+.body{
+    background-repeat: repeat;
+    background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url('../images/background-151.jpg');
+}

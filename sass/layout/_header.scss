@@ -1,0 +1,136 @@
+/* Estilos del header y sus componentes */
+.header {
+    display: grid;
+    grid-template-columns: 2.5fr 7fr 2.5fr;
+    gap: 10px;
+    background-color: #E63946;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    position: sticky;
+    top: 10px;
+    border: 1px solid black;
+    z-index: 10000;
+}
+
+#toggle-header {
+    display: none;
+    /* background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px; */
+}
+
+.header > div, .header nav {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.buscador-form, .formato-input, select.formato-input {
+    background-color: white;
+    border-radius: 5px;
+    border: white;
+}
+
+.input-con-boton {
+    display: flex;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.input-con-boton input[type="search"] {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+    color: #003366;
+}
+.input-con-boton button, .button1 input, .button2 input, .buscador button, .div-button button  {
+    background-color: #E63946;
+    border: 1px solid white;
+    padding: 0 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color:white;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+}
+
+.input-con-boton button:hover,
+.input-con-boton button:focus,
+.input-con-boton button:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.header > nav > ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.header > nav > ul > li {
+    padding: 5px 0;
+    text-align: center;
+}
+
+.header > nav > ul > li > a {
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.moneda-usuario, .moneda-usuario div {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.select-moneda {
+    font-family: inherit;
+    font-size: 1rem;
+    color: #003366;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    height: 38px;
+    outline: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.select-moneda option {
+    background-color: white;
+    color: #003366;
+}
+
+.actual {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.actual a img {
+    margin-right: 5px;
+}
+
+.marca {
+    font-size: 1.2rem;
+}

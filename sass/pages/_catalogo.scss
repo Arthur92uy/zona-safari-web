@@ -1,0 +1,79 @@
+/* Estilos del main catalogo y sus componentes */
+
+.main-catalogo {
+    grid-template-rows: auto 1fr;
+    font-size: 1rem;
+}
+
+.contenedor-catalogo {
+    background-color: #ffffff;
+    padding: 20px;
+    justify-content: flex-start;
+    color:#003366;
+}
+
+.catalogo, .ofertas {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    width: 100%;
+    max-height: calc(350px*3);
+    overflow-y:scroll;
+    border-radius: 12px;
+}
+
+.producto {
+    background-color: #003366;
+    display: grid;
+    grid-template-columns: 2.6fr 3.4fr;
+    width: 100%;
+    border: 1px solid black; 
+    border-radius: 12px;
+}
+
+.div-detalles-producto {
+    display: grid;
+    grid-template-rows: 0.7fr 4fr 2.2fr 1.1fr;
+}
+
+.div-img-producto {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-producto {
+    max-width: 255px;
+    width: auto;
+    max-height: 350px;
+    height: auto;
+    border: 1px solid white;
+    border-radius: $radius-cartas;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+.nombre-ps {
+    display: flex;
+    text-decoration: underline;
+}
+
+.ataque {
+    max-height: 103px;
+    overflow-y: scroll;
+}
+
+.div-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px 0 0;
+}
+
+.div-button a {
+    text-decoration: none;
+}
+
+.nombre-ps, .detalles, .ataque {
+    color: #ffffff;
+}

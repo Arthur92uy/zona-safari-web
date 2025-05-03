@@ -31,6 +31,3 @@ fetch('../js/datos-cartas.json')
 })
 .catch(error => console.error('Error cargando datos:', error));
 });
-
-
-  
