@@ -1,3 +1,8 @@
+@use "../abstracts/variables" as *;
+@use "../base/paletas" as *;
+
+//  Contenedores padres
+
 .container {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -5,5 +10,15 @@
     width: 100%;
     min-height: 100vh;
     margin: 0 auto;
-    padding: 10px;
+    padding: $padding10;
+    ::-webkit-scrollbar {
+        width: 12px; /* o el ancho que tenga tu scrollbar */
+    }
+    ::-webkit-scrollbar-track {
+        background: transparent; /* ¡Este es el espacio que se ve feo! */
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.3); /* O transparent si no querés ver el thumb */
+        border-radius: 6px;
+    }
 }

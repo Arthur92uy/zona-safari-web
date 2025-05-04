@@ -1,64 +1,62 @@
+@use "../abstracts/variables" as *;
+@use "../base/paletas" as *;
+@use "../abstracts/mixins.scss" as *;
+
 /* Estilos del header y sus componentes */
 .header {
     display: grid;
-    grid-template-columns: 2.5fr 7fr 2.5fr;
-    gap: 10px;
-    background-color: #E63946;
-    padding: 10px;
-    color: white;
-    border-radius: 5px;
+    grid-template-columns: 3fr 6fr 3fr;
+    background-color: $bg-header-footer-0150;
+    padding: $padding10;
+    border-radius: $radius5;
     position: sticky;
     top: 10px;
-    border: 1px solid black;
-    z-index: 10000;
+    z-index: 1000;
+    border: $border-negro;
+    #toggle-header {
+        display: none;
+    }
+    > div, > nav {
+        display: flex;
+        align-items: center;
+        padding: $padding10;
+    }
+    .buscador-form {
+        width: 100%;
+    }
 }
 
-#toggle-header {
-    display: none;
-    /* background: none;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    margin-left: 10px; */
-}
 
-.header > div, .header nav {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-}
 
-.buscador-form, .formato-input, select.formato-input {
-    background-color: white;
-    border-radius: 5px;
-    border: white;
+.buscador-form {
+    background-color: $texto-header-footer-0150;
+    border-radius: $radius5;
+    border: $border-blanco;
 }
 
 .input-con-boton {
     display: flex;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: $radius5;
+    input[type="search"] {
+        flex: 1;
+        border: none;
+        padding: $padding10;
+        outline: none;
+        color: $bg-header-footer-0150;
+        font-size: $font-size-base;
+    }
+    #buscar::placeholder{
+        color: $bg-header-footer-0150;
+    }
+    button:hover, button:focus, button:active {
+        outline: none;
+        box-shadow: none;
+    }
 }
 
-.input-con-boton input[type="search"] {
-    flex: 1;
-    border: none;
-    padding: 10px;
-    font-size: 1rem;
-    outline: none;
-    color: #003366;
-}
-.input-con-boton button, .button1 input, .button2 input, .buscador button, .div-button button  {
-    background-color: #E63946;
-    border: 1px solid white;
-    padding: 0 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    color:white;
+.input-con-boton button, .buscador button {
+    @include boton-1($bg-header-footer-0150, $border-blanco, $texto-header-footer-0150, $radius5, 38px);
 }
 
 .visually-hidden {
@@ -66,51 +64,46 @@
     left: -10000px;
 }
 
-.input-con-boton button:hover,
-.input-con-boton button:focus,
-.input-con-boton button:active {
-    outline: none;
-    box-shadow: none;
-}
-
-.header > nav > ul {
+.header nav ul {
     display: flex;
     list-style: none;
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-}
-
-.header > nav > ul > li {
-    padding: 5px 0;
-    text-align: center;
-}
-
-.header > nav > ul > li > a {
-    color: white;
-    text-decoration: none;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 0;
+    li {
+        padding: 5px 0;
+        text-align: center;
+        a {
+            text-decoration: none;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 0;
+            color: $texto-header-footer-0150;
+        }
+    }
 }
 
 .moneda-usuario, .moneda-usuario div {
-
     display: flex;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
+}
+
+.moneda-usuario img {
+    width: 45px;
+    height: 45px;
 }
 
 .select-moneda {
-    font-family: inherit;
-    font-size: 1rem;
-    color: #003366;
-    background-color: white;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 10px;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $bg-header-footer-0150;
+    background-color: $texto-header-footer-0150;
+    border: $border-blanco;
+    border-radius: $radius5;
+    padding: $padding10;
     height: 38px;
     outline: none;
     cursor: pointer;
@@ -118,17 +111,16 @@
 }
 
 .select-moneda option {
-    background-color: white;
-    color: #003366;
+    background-color: $texto-header-footer-0150;
+    color: $bg-header-footer-0150;
 }
 
 .actual {
     font-weight: bold;
     text-decoration: underline;
-}
-
-.actual a img {
-    margin-right: 5px;
+    a img {
+        margin-right: 5px
+    }
 }
 
 .marca {

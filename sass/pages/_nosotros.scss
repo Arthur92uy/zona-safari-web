@@ -1,58 +1,82 @@
+@use "../abstracts/variables" as *;
+@use "../base/paletas" as *;
+@use "../abstracts/mixins.scss" as *;
+
 /* Estilos del main nosotros y sus componentes */
+
+.header-pikachu, .footer-pikachu {
+    background-color: $bg-header-footer-0025;
+}
+
+.header-pikachu button {
+    color: $texto-header-footer-0025;
+    background-color: $bg-header-footer-0025;
+}
+
+#buscar.buscador-pikachu, #buscar.buscador-pikachu::placeholder{
+    color: $bg-header-footer-0025;
+}
+
+.select-moneda-pikachu {
+    color: $bg-header-footer-0025;
+}
+
+.banner .span-pikachu, .banner .span-pikachu {
+    color: $bg-header-footer-0025;
+    @include tshadow(rgba(0, 0, 0, 0.4));
+}
 
 .main-nosotros {
     grid-template-rows: auto 1fr;
-}
-.contenedor-nosotros {
-    background-color: #E3B448;
-    padding: 20px;
-    justify-content: flex-start;
-}
-
-.nosotros {
-    display: grid;
-    grid-template-areas: 
-    'texto1 imagen1'
-    'imagen2 texto2';
-    gap: 30px;
-    padding: 20px;
-    text-align: justify;
-}
-
-.texto1 {
-    grid-area: texto1;
-}
-
-.imagen1 {
-    grid-area: imagen1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.imagen2 {
-    grid-area: imagen2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.texto2 {
-    grid-area: texto2;
-}
-
-.texto1, .texto2, .imagen1, .imagen2 {
-    color: #003366;
-    background-color: rgba(255, 255, 255, 0.3);
-    padding: 5px 10px 0 5px;
-    border-radius: 5px;
-    border: 1px solid white;
-    font-size: 1.1rem;
-    
-}
-
-.imagen1 div img, .imagen2 div img {
-    border: 1px solid white;
-    box-shadow: 0 0 10px #ffffff;
-    border-radius: 5px;
+    .contenedor-nosotros {
+        @include contenedor-secciones($border-negro);
+        background-color: $bg-seccion-main-1-0025;
+        color: $texto-seccion-main-1-0025;
+        padding: $padding10;
+        justify-content: flex-start;
+        .nosotros {
+            display: grid;
+            grid-template-areas: 
+            'texto1 imagen1'
+            'imagen2 texto2';
+            gap: 30px;
+            background-color: $bg-seccion-main-2-0025;
+            padding: 20px;
+            text-align: justify;
+            border-radius: $radius5;
+            .texto1 {
+                grid-area: texto1;
+            }
+            .texto2 {
+                grid-area: texto2;
+            }
+            .imagen1, .imagen2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 100%;
+                    border-radius: $radius-cartas;
+                    border: 1px solid $texto-seccion-main-2-0025;
+                }
+            }
+            .imagen2 {
+                grid-area: imagen2;
+            }
+            .imagen1 {
+                grid-area: imagen1;
+            }
+            .texto2, .texto1 {
+                color: $texto-seccion-main-2-0025;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: $padding10;
+                background-color: rgba(255, 255, 255, 0.7);
+                border-radius: $radius-cartas;
+            }
+            
+        }
+    }
 }

@@ -1,42 +1,90 @@
+@use "../abstracts/variables" as *;
+@use "../base/paletas" as *;
+@use "../abstracts/mixins.scss" as *;
+
 /* Estilos del main catalogo y sus componentes */
+
+.header-bulbasaur, .footer-bulbasaur {
+    background-color: $bg-header-footer-0001 ;
+}
+
+.header-bulbasaur button {
+    color: $texto-header-footer-0001;
+    background-color:  $bg-header-footer-0001;
+}
+
+#buscar.buscador-bulbasaur, #buscar.buscador-bulbasaur::placeholder{
+    color: $bg-header-footer-0001;
+}
+
+.select-moneda-bulbasaur {
+    color: $bg-header-footer-0001;
+}
 
 .main-catalogo {
     grid-template-rows: auto 1fr;
-    font-size: 1rem;
+    .contenedor-catalogo {
+        @include contenedor-secciones($border-negro);
+        background-color: #ffffff;
+        padding: 10px;
+        justify-content: flex-start;
+        color: $texto-seccion-main-1-0001;
+    }
 }
 
-.contenedor-catalogo {
-    background-color: #ffffff;
-    padding: 20px;
-    justify-content: flex-start;
-    color:#003366;
+.banner .span-bulbasaur, .banner .span-bulbasaur {
+    color: $color-destacar-0001;
+    @include tshadow(rgba(0, 0, 0, 0.4));
 }
 
-.catalogo, .ofertas {
-    background-color: #ffffff;
+.catalogo {
+    background-color: transparent;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5px;
+    gap: 10px;
     width: 100%;
-    max-height: calc(350px*3);
-    overflow-y:scroll;
-    border-radius: 12px;
+    max-height: calc(360px*3);
+    overflow-y: scroll;
+    border-radius: $radius5;
+    padding-right: 5px;
+    .producto {
+        background-color: $bg-seccion-main-2-0001;
+        display: grid;
+        grid-template-columns: 2.6fr 3.4fr;
+        width: 100%;
+        border: 1px solid black; 
+        border-radius: 12px;
+    }
+    .div-detalles-producto {
+        display: grid;
+        grid-template-rows: 0.7fr 4fr 2.2fr 1.1fr;
+        .nombre-ps {
+            display: flex;
+            text-decoration: underline;
+            justify-content: space-evenly;
+        }
+        
+        .ataque {
+            max-height: 103px;
+            overflow-y: scroll;
+        }
+        
+        .div-button {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 10px 0 0;
+        }
+        
+        .div-button a {
+            text-decoration: none;
+        }
+        
+        .nombre-ps, .detalles, .ataque {
+            color: #ffffff;
+        }
+    }
 }
-
-.producto {
-    background-color: #003366;
-    display: grid;
-    grid-template-columns: 2.6fr 3.4fr;
-    width: 100%;
-    border: 1px solid black; 
-    border-radius: 12px;
-}
-
-.div-detalles-producto {
-    display: grid;
-    grid-template-rows: 0.7fr 4fr 2.2fr 1.1fr;
-}
-
 .div-img-producto {
     padding: 10px;
     display: flex;
@@ -50,30 +98,9 @@
     height: auto;
     border: 1px solid white;
     border-radius: $radius-cartas;
-    box-shadow: 0 0 10px #ffffff;
+    box-shadow: 0 0 10px 5px #ffffff;
 }
 
-.nombre-ps {
-    display: flex;
-    text-decoration: underline;
-}
-
-.ataque {
-    max-height: 103px;
-    overflow-y: scroll;
-}
-
-.div-button {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 10px 0 0;
-}
-
-.div-button a {
-    text-decoration: none;
-}
-
-.nombre-ps, .detalles, .ataque {
-    color: #ffffff;
-}
+    .div-button button {
+        @include boton-1 ($color-destacar-0001, $border-blanco, $texto-header-footer-0001, $radius5, 152px)
+    }

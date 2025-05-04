@@ -1,44 +1,44 @@
+@use "../abstracts/variables" as *;
+@use "../base/paletas" as *;
+@use "../abstracts/mixins.scss" as *;
+
 /* Estilos del footer y sus componentes */
 
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: #E63946;
-    color: white;
+    background-color:$bg-header-footer-0150;
+    color: $texto-header-footer-0150;
     padding: 20px;
-    gap: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-.links, .redes {
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
-    font-size: 1rem;
-}
-
-.links ul, .redes ul {
-    list-style: none;
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
+    gap: $gap10;
+    border: $border-negro;
+    border-radius: $radius5;
+    .links, .redes {
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+        ul {
+            list-style: none;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+    }
 }
 
 .links ul li a {
     text-decoration: underline;
-    color: white;
+    color: $texto-header-footer-0150;
 }
 
 .redes ul {
     justify-content: flex-end;
+    li {
+        padding-left: 20px;
+    }
 }
 
-.redes ul li {
-    padding-left: 20px;
-}
-
-.redes ul li a img, #header .moneda-usuario img {
+.redes ul li a img {
     width: 45px;
     height: 45px;
 }

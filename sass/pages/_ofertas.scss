@@ -1,84 +1,128 @@
+@use "../abstracts/variables" as *;
+@use "../base/paletas" as *;
+@use "../abstracts/mixins.scss" as *;
+
+/* Estilos del Main Catalogo y sus componentes */
+
+.header-charizard, .footer-charizard {
+    background-color: $bg-header-footer-0006;
+}
+
+.header-charizard button {
+    color: $texto-header-footer-0006;
+    background-color: $bg-header-footer-0006;
+}
+
+#buscar.buscador-charizard, #buscar.buscador-charizard::placeholder{
+    color: $bg-header-footer-0006;
+}
+
+.select-moneda-charizard {
+    color: $bg-header-footer-0006;
+}
+
+.banner .span-charizard, .banner .span-charizard {
+    color: $color-destacar-0006;
+    @include tshadow(rgba(0, 0, 0, 0.4));
+}
+
 .main-ofertas {
     display: grid;
     grid-template-rows: auto 1fr;
-    grid-template-columns: auto;
-    gap: 10px;
-}
-
-.contenedor-ofertas {
-    background-color: #E3B448;
-    background-color: #ffffff;
-    padding: 20px;
-    justify-content: flex-start;
-    color:#003366;
-}
-
-
-.nps-ofertas, .detalles-ofertas, .ataque-ofertas {
-    color: white;
-    border: 1px solid white;
-}
-
-.ofertas {
-    grid-template-rows: 1fr 1fr;
-    gap: 5px;
-    width: 100%;
-    overflow-y:scroll;
-    border-radius: 12px;
-    background-color: #003366;
-    border: 1px solid white;
-    grid-template-columns: none;
-}
-.div-detalles-producto-ofertas {
-    display: grid;
-    grid-template-rows: 0.7fr 4fr 2.3fr;
-}
-.ofertas-producto {
-    background-color: transparent;
-    display: grid;
-    grid-template-columns: 2fr 5fr 5fr;
-    border-radius: 5px;
-    border: 1px solid white;
-}
-
-.grafica {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    max-width: 100%;
-    max-height: 100%;
-    border: 1px solid #ffffff;
-    margin: 10px;
-    border-radius: 5px;
-}
-
-.contenedor-tabla {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    color: #ffffff;
-}
-
-table {
-    border-collapse: separate;
-    border-spacing: 0 5px;
-    width: 100%;
-    margin: 10px;
-}
-
-th, td {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid white;
-}
-
-table td a {
-    text-decoration: none;
-    color: #ffffff;
-}
-
-thead th {
-    font-size: 1.5rem;
+    gap: $gap10;
+    .contenedor-ofertas {
+        @include contenedor-secciones($border-negro);
+        background-color: $bg-seccion-main-1-0006;
+        padding: $padding10;
+        justify-content: flex-start;
+        color: $texto-seccion-main-1-0006;
+        .ofertas {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 5px;
+            width: 100%;
+            border-radius: $radius5;
+            background-color: $bg-seccion-main-2-0006;
+            border: $border-blanco;
+            grid-template-columns: none;
+            .div-img-producto-ofertas {
+                padding: 10 0;
+                display: flex;
+            }
+            .div-detalles-producto-ofertas {
+                display: grid;
+                grid-template-rows: 0.7fr 4fr 2.3fr;
+                .nps-ofertas, .detalles-ofertas, .ataque-ofertas {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: flex-start;
+                    color: $texto-seccion-main-2-0006;
+                    padding-top: 5px;
+                    padding-left: 5px;
+                }
+                .nps-ofertas {
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+            }
+            .ofertas-producto {
+                background-color: transparent;
+                display: grid;
+                grid-template-columns: 3fr 4fr 5fr;
+                border-radius: $radius5;
+                border: $border-blanco;
+            }
+            .grafica {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $texto-seccion-main-2-0006;
+                max-width: 100%;
+                max-height: 100%;
+                border: $border-blanco;
+                margin: 10px;
+                border-radius: $radius5;
+            }
+        }
+        .contenedor-tabla {
+            max-width: 100%;
+            color: $texto-seccion-main-2-0006;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            table {
+                display: table;
+                border-collapse: separate;
+                border-spacing: 0;
+                max-width: 100%;
+                margin: 10px;
+                border: $border-blanco;
+                border-radius: $radius5;
+                overflow: hidden;
+                th, td {
+                padding: 10px;
+                text-align: center;
+                border-bottom: $border-blanco;
+                }
+                thead {
+                font-size: 1.5rem;
+                background-color: $texto-seccion-main-2-0006;
+                color: $bg-seccion-main-2-0006;
+                }
+                tbody {
+                    tr:last-child {
+                        td {
+                            border-bottom: none; // eliminamos para que no sobrescriba el borde del table
+                        }
+                    }
+                }
+                td a {
+                text-decoration: none;
+                color: $texto-seccion-main-2-0006;
+                }
+            }
+        }
+    }
 }

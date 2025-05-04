@@ -1,140 +1,96 @@
-/* Estilos del main index y sus componentes */
+@use "../abstracts/variables" as *;
+@use "../base/paletas" as *;
+@use "../abstracts/mixins.scss" as *;
 
-.main {
-    display: grid;
-    grid-template-rows: auto 1fr 1fr;
-    gap: 10px;
-    padding: 10px 0;
-    background-color: transparent;
-}
-
-.banner {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    border: 1px solid black;
-    border-radius: 5px;
-
-}
-
-.banner img {
-
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.banner span {
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-    z-index: 2;
-    text-shadow: 2px 2px 4px rgba(0,0,0,1);
-}
-
-.banner .span1 {
-    top: 35%;
-}
-
-.banner .span2 {
-    top: 55%;
-}
-.noticias, .destacados, .contenedor-contacto, .contenedor-nosotros, .contenedor-catalogo, .contenedor-ofertas {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    border: 1px solid black;
+/* Estilos del Main Index y sus componentes */
+.noticias, .destacados {
+    @include contenedor-secciones($border-negro)
 }
 
 .noticias {
-    background-color: #E3B448;
+    background-color: $bg-seccion-main-1-0150;
+    color: $texto-seccion-main-1-0150;
 }
 
 .titulo {
     text-decoration: underline;
-    padding-top: 10px;
+    padding-top: $padding10;
     text-align: center;
+    padding-bottom: 20px;
 }
+
 iframe {
-    border: 1px solid black;
+    border: $border-negro;
     margin: 5px;
 }
 
 .videos-ultimas-noticias {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 10px;
-}
-
-.videos-ultimas-noticias .videos {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
+    padding: $padding10;
+    .videos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .destacados {
-    background-color: #003366;
+    background-color: $bg-seccion-main-2-0150;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     max-width: 1200px;
-    padding: 10px;
-}
 
-.destacados .contenedor-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 100%;
-    gap: 10px;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.contenedor-cards section h3, .contenido-card h5 {
-    padding: 5px 0;
+    .contenedor-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 100%;
+        gap: $gap10;
+        padding: $padding10;
+        border-radius: $radius5;
+        section h3 {
+            padding: 5px 0;
+        }
+    }
 }
 
 .compra-venta, .intercambio {
     display: flex;
     flex-direction: column;
-    align-items:center;
-    border-radius: 5px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: $radius5;
     padding: 10px;
-    background-color: white;
-    color: #003366;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    border: 1px solid white;
-    background-color:#003366;
-    border-radius: 10px;
-    color: white;
-    padding: 5px;
-}
-.contenido-card {
-    text-align: center;
-    background-color:transparent;
-    border-radius: 12px;
-    padding: 5px;
-}
-
-.contenido-card img {
-    width: 95%;
-    object-fit: contain;
-    border-radius:$radius-cartas;
-    box-shadow: 0 0 10px #ffffff;
-    border: 1px solid white;
+    background-color: $texto-seccion-main-2-0150;
+    color: $bg-seccion-main-2-0150;
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: $gap10;
+        padding: 15px;
+        border: $border-blanco;
+        background-color: $bg-seccion-main-2-0150;
+        border-radius: $radius5;
+        color: $texto-seccion-main-2-0150;
+        .contenido-card {
+            text-align: center;
+            background-color: transparent;
+            border-radius: $radius-cartas;
+            // padding: $padding10;
+            h5 {
+                padding: 5px 0;
+            }
+            img {
+                max-width: 100%;
+                object-fit: contain;
+                overflow: hidden;
+                border-radius: $radius-cartas;
+                box-shadow: 0 0 10px 5px #ffffff;
+                border:$border-blanco;
+            }
+        }
+    }
 }
