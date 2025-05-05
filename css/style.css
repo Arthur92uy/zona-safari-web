@@ -3,9 +3,7 @@
 /* Variables */
 /* Configuracion generica */
 /* _reset.scss */
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -1059,12 +1057,30 @@ iframe {
   .main-contacto .contenedor-contacto {
     overflow-x: hidden;
   }
-  .main-contacto .contenedor-contacto .formulario {
-    grid-template-areas: "label1 label1" "text1 text1" "label2 label2" "text2 text2" "label3 label3" "text3 text3" "label4 label4" "text4 text4" "label5 label5" "text5 text5" "button1 button2";
+  .main-contacto .contenedor-contacto form {
+    max-width: 100%;
+    padding: 5px;
   }
-  .main-contacto .contenedor-contacto section .label1, .main-contacto .contenedor-contacto section .label2, .main-contacto .contenedor-contacto section .label3, .main-contacto .contenedor-contacto section .label4, .main-contacto .contenedor-contacto section .label5 {
+  .main-contacto .contenedor-contacto form fieldset.formulario {
+    grid-template-areas: "label1 label1" "text1 text1" "label2 label2" "text2 text2" "label3 label3" "text3 text3" "label4 label4" "text4 text4" "label5 label5" "text5 text5" "button1 button2";
+    max-width: 100%;
+    width: auto;
+    border: 1px solid black;
+    padding: 5px;
+  }
+  .main-contacto .contenedor-contacto form section {
+    max-width: 100%;
+  }
+  .main-contacto .contenedor-contacto form section .label1, .main-contacto .contenedor-contacto form section .label2, .main-contacto .contenedor-contacto form section .label3, .main-contacto .contenedor-contacto form section .label4, .main-contacto .contenedor-contacto form section .label5 {
     align-items: flex-start;
     justify-content: flex-start;
+  }
+  .main-contacto .contenedor-contacto form section .label1 .formato-input, .main-contacto .contenedor-contacto form section .label1 .select.formato-input, .main-contacto .contenedor-contacto form section .label2 .formato-input, .main-contacto .contenedor-contacto form section .label2 .select.formato-input, .main-contacto .contenedor-contacto form section .label3 .formato-input, .main-contacto .contenedor-contacto form section .label3 .select.formato-input, .main-contacto .contenedor-contacto form section .label4 .formato-input, .main-contacto .contenedor-contacto form section .label4 .select.formato-input, .main-contacto .contenedor-contacto form section .label5 .formato-input, .main-contacto .contenedor-contacto form section .label5 .select.formato-input {
+    max-width: 100%;
+  }
+  .main-contacto .contenedor-contacto form section .button1 input, .main-contacto .contenedor-contacto form section .button2 input {
+    width: auto;
+    max-width: 100%;
   }
   .main-nosotros .contenedor-nosotros .nosotros {
     grid-template-areas: "texto1" "imagen1" "texto2" "imagen2";
