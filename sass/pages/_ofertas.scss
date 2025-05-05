@@ -23,7 +23,7 @@
 
 .banner .span-charizard, .banner .span-charizard {
     color: $color-destacar-0006;
-    @include tshadow(rgba(0, 0, 0, 0.4));
+    @include tshadow(rgba(255, 255, 255, 0.5));
 }
 
 .main-ofertas {
@@ -114,7 +114,7 @@
                 tbody {
                     tr:last-child {
                         td {
-                            border-bottom: none; // eliminamos para que no sobrescriba el borde del table
+                            border-bottom: none;
                         }
                     }
                 }

@@ -38,6 +38,7 @@
     display: flex;
     overflow: hidden;
     border-radius: $radius5;
+    max-height: 38px;
     input[type="search"] {
         flex: 1;
         border: none;
