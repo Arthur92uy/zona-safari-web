@@ -359,7 +359,8 @@ p {
   border-radius: 5px;
 }
 .destacados .contenedor-cards section h3 {
-  padding: 5px 0;
+  padding: 0 0 5px 0;
+  text-decoration: underline;
 }
 .destacados .contenedor-cards .compra-venta, .destacados .contenedor-cards .intercambio {
   display: flex;
@@ -383,19 +384,21 @@ p {
   background-color: #ffffff;
   color: #C292BA;
   border-radius: 17px;
-  padding: 0 5px;
+  padding: 5px 5px 0 5px;
 }
 .destacados .contenedor-cards .compra-venta .cards .contenido-card h3, .destacados .contenedor-cards .intercambio .cards .contenido-card h3 {
-  padding: 5px 0 0 0;
+  padding: 0;
+  text-decoration: none;
 }
 .destacados .contenedor-cards .compra-venta .cards .contenido-card h4, .destacados .contenedor-cards .intercambio .cards .contenido-card h4 {
-  padding: 0 0 5px 0;
+  padding: 0;
 }
 .destacados .contenedor-cards .compra-venta .cards .contenido-card img, .destacados .contenedor-cards .intercambio .cards .contenido-card img {
   max-width: 100%;
   object-fit: contain;
   overflow: hidden;
   border-radius: 17px;
+  border: 1px solid black;
 }
 
 /* Estilos del main catalogo y sus componentes */
