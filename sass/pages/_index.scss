@@ -10,87 +10,88 @@
 .noticias {
     background-color: $bg-seccion-main-1-0150;
     color: $texto-seccion-main-1-0150;
-}
-
-.titulo {
-    text-decoration: underline;
-    padding-top: $padding10;
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-iframe {
-    border: $border-negro;
-    margin: 5px;
-}
-
-.videos-ultimas-noticias {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: $padding10;
-    .videos {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
+    .titulo {
+        text-decoration: underline;
+        padding: $padding10;
         text-align: center;
+    }
+    .videos-ultimas-noticias {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 0 35px;
+        height: 100%;
+        .videos {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            padding-top: 20px;
+            iframe {
+                border: $border-negro;
+                width: 100%;
+                height: auto;
+                aspect-ratio: 16 / 9;
+            }
+            h4 {
+                padding: 5px 0;
+            }
+        }
     }
 }
 
 .destacados {
     background-color: $bg-seccion-main-2-0150;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1200px;
-
+    color: $texto-seccion-main-2-0150;
     .contenedor-cards {
         display: grid;
         grid-template-columns: 1fr 1fr;
         max-width: 100%;
-        gap: $gap10;
-        padding: $padding10;
+        height: 100%;
+        gap: 5px;
+        padding: 0 5px 10px 5px;
         border-radius: $radius5;
         section h3 {
             padding: 5px 0;
         }
-    }
-}
-
-.compra-venta, .intercambio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    border-radius: $radius5;
-    padding: 10px;
-    background-color: $texto-seccion-main-2-0150;
-    color: $bg-seccion-main-2-0150;
-    .cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: $gap10;
-        padding: 15px;
-        border: $border-blanco;
-        background-color: $bg-seccion-main-2-0150;
-        border-radius: $radius5;
-        color: $texto-seccion-main-2-0150;
-        .contenido-card {
-            text-align: center;
-            background-color: transparent;
-            border-radius: $radius-cartas;
-            // padding: $padding10;
-            h5 {
-                padding: 5px 0;
-            }
-            img {
-                max-width: 100%;
-                object-fit: contain;
-                overflow: hidden;
-                border-radius: $radius-cartas;
-                box-shadow: 0 0 10px 5px #ffffff;
-                border:$border-blanco;
+        .compra-venta, .intercambio {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: $radius5;
+            background-color: inherit;
+            color: inherit;
+            .cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 5px;
+                background-color: transparent;
+                border-radius: $radius5;
+                max-height: 100%;
+                .contenido-card {
+                    text-align: center;
+                    background-color: $bg-seccion-main-1-0150;
+                    color: $texto-seccion-main-1-0150;
+                    border-radius: $radius-cartas;
+                    padding: 0 5px;
+                    h3 {
+                        padding: 5px 0 0 0;
+                    }
+                    h4 {
+                        padding: 0 0 5px 0;
+                    }
+                    img {
+                        max-width: 100%;
+                        object-fit: contain;
+                        overflow: hidden;
+                        border-radius: $radius-cartas;
+                        // box-shadow: 0 0 10px 5px #ffffff;
+                    }
+                }
             }
         }
     }
 }
+

@@ -6,13 +6,9 @@
 
 @media (max-width: 430px) {
 
-    /* === BODY === */
     html, .body {
-        overflow-x: hidden;
         max-width: 100%;
     }
-
-    /* === HEADER === */
 
     .header {
         grid-template-columns: 1fr;
@@ -22,18 +18,9 @@
         .menu-opciones, .moneda-usuario {
             display: none;
         }
-    }
-    .header.expandido {
-        max-height: 500px;
-        .menu-opciones, .moneda-usuario {
-            display: flex;
-        }
-    }
-
-    .header {
         max-width: 100%;
         .buscador {
-            width:100%;
+            max-width:100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -63,8 +50,22 @@
             flex-direction: column;
             align-items: flex-start;
             width: 100%;
+            li, li.marca {
+                width: 100%;
+                a {
+                    justify-content: flex-start;
+                }
+            }
+
         }
     }
+    .header.expandido {
+        max-height: 500px;
+        .menu-opciones, .moneda-usuario {
+            display: flex;
+        }
+    }
+
 
     /* === MAIN === */
     .main {
@@ -82,6 +83,7 @@
         }
         .noticias {
             justify-content: center;
+            max-width: 100%;
             .titulo {
                 padding-top: 5px;
             }
@@ -89,7 +91,9 @@
                 grid-template-columns: 1fr;
                 max-width: 100%;
                 iframe {
+                    max-width: 100%;
                     width: auto;
+                    max-height: 100%;
                     height: auto;
                 }
             }
@@ -167,48 +171,43 @@
 /* Formulario de contacto */
 
 
-.main-contacto .contenedor-contacto {
-    // width: 100%;
-    overflow-x: hidden;
-    form {
-        max-width: 100%;
-        padding: 5px;
-        fieldset.formulario {
-            grid-template-areas: 
-            'label1 label1'
-            'text1 text1'
-            'label2 label2'
-            'text2 text2'
-            'label3 label3'
-            'text3 text3'
-            'label4 label4'
-            'text4 text4'
-            'label5 label5'
-            'text5 text5'
-            'button1 button2';
-            max-width: 100%;
-            width: auto;
-            border: 1px solid black;
+.main-contacto {
+    // overflow-x: hidden;
+    max-width: 100%;
+    .contenedor-contacto {
+        form {
             padding: 5px;
-        }
-        section {
-            max-width: 100%;
-            .label1, .label2, .label3, .label4, .label5 {
-                align-items: flex-start;
-                justify-content: flex-start;
-                            .formato-input, .select.formato-input {
-                max-width: 100%;
-            }
-            }
-
-            .button1 input, .button2 input {
-                width: auto;
-                max-width: 100%;
+            border: 1px solid black;
+            .formulario {
+                overflow-x: hidden;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 
+                'label1 label1'
+                'text1 text1'
+                'label2 label2'
+                'text2 text2'
+                'label3 label3'
+                'text3 text3'
+                'label4 label4'
+                'text4 text4'
+                'label5 label5'
+                'text5 text5'
+                'button1 button2';
+                width: 100%;
+                padding: 5px;
+                .button1 input, .button2 input {
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .label1, .label2, .label3, .label4, .label5 {
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                }
             }
         }
     }
 }
-    
 
     .main-nosotros .contenedor-nosotros {
         .nosotros {

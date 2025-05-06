@@ -5,125 +5,114 @@
 /* Estilos del header y sus componentes */
 .header {
     display: grid;
-    grid-template-columns: 3fr 6fr 3fr;
+    grid-template-columns: 3fr 6.5fr 2.5fr;
+    gap: 5px;
     background-color: $bg-header-footer-0150;
-    padding: $padding10;
+    padding: 10px 20px;
     border-radius: $radius5;
     position: sticky;
     top: 10px;
     z-index: 1000;
     border: $border-negro;
+    max-width: 100%;
     #toggle-header {
         display: none;
     }
-    > div, > nav {
+    div, nav {
         display: flex;
         align-items: center;
-        padding: $padding10;
+        justify-content: center;
+        max-width: 100%;
     }
     .buscador-form {
+        background-color: $texto-header-footer-0150;
+        border-radius: $radius5;
+        border: $border-blanco;
         width: 100%;
-    }
-}
-
-
-
-.buscador-form {
-    background-color: $texto-header-footer-0150;
-    border-radius: $radius5;
-    border: $border-blanco;
-}
-
-.input-con-boton {
-    display: flex;
-    overflow: hidden;
-    border-radius: $radius5;
-    max-height: 38px;
-    input[type="search"] {
-        flex: 1;
-        border: none;
-        padding: $padding10;
-        outline: none;
-        color: $bg-header-footer-0150;
-        font-size: $font-size-base;
-    }
-    #buscar::placeholder{
-        color: $bg-header-footer-0150;
-    }
-    button:hover, button:focus, button:active {
-        outline: none;
-        box-shadow: none;
-    }
-}
-
-.input-con-boton button, .buscador button {
-    @include boton-1($bg-header-footer-0150, $border-blanco, $texto-header-footer-0150, $radius5, 38px);
-}
-
-.visually-hidden {
-    position: absolute;
-    left: -10000px;
-}
-
-.header nav ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    li {
-        padding: 5px 0;
-        text-align: center;
-        a {
-            text-decoration: none;
-            height: 100%;
+        .input-con-boton {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 5px 0;
-            color: $texto-header-footer-0150;
+            overflow: hidden;
+            border-radius: $radius5;
+            max-height: 2rem;
+            width: 100%;
+            padding: 0;
+            button {
+                @include boton-1($bg-header-footer-0150, $border-blanco, $texto-header-footer-0150, $radius5, 2rem);
+            }
+            input[type="search"] {
+                width: 100%;
+                outline: none;
+                color: $bg-header-footer-0150;
+                font-size: $font-size-base;
+                border: $border-blanco;
+                padding-left: 5px;
+            }
+            #buscar::placeholder{
+                color: $bg-header-footer-0150;
+            }
+            button:hover, button:focus, button:active {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+        .visually-hidden {
+            position: absolute;
+            left: -10000px;
         }
     }
-}
-
-.moneda-usuario, .moneda-usuario div {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.moneda-usuario img {
-    width: 45px;
-    height: 45px;
-}
-
-.select-moneda {
-    font-family: $font-family-base;
-    font-size: $font-size-base;
-    color: $bg-header-footer-0150;
-    background-color: $texto-header-footer-0150;
-    border: $border-blanco;
-    border-radius: $radius5;
-    padding: $padding10;
-    height: 38px;
-    outline: none;
-    cursor: pointer;
-    margin: 0 10px;
-}
-
-.select-moneda option {
-    background-color: $texto-header-footer-0150;
-    color: $bg-header-footer-0150;
-}
-
-.actual {
-    font-weight: bold;
-    text-decoration: underline;
-    a img {
-        margin-right: 5px
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        li {
+            padding: 5px 0;
+            text-align: center;
+            // width: 100%;
+            a {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 5px 0;
+                color: $texto-header-footer-0150;
+                img {
+                    opacity: 0;
+                }
+            }
+        }
+        li.actual {
+            font-weight: bold;
+            a img {
+                opacity: 1;
+            }
+        }
+        li.marca {
+            font-size: 1.2rem;
+        }
     }
-}
-
-.marca {
-    font-size: 1.2rem;
+    .moneda-usuario {
+        justify-content: space-evenly;
+        color: $texto-header-footer-0150;
+        label {
+            padding-right: 5px;
+        }
+        .select-moneda {
+            font-family: $font-family-base;
+            font-size: $font-size-base;
+            color: $bg-header-footer-0150;
+            background-color: $texto-header-footer-0150;
+            border: $border-blanco;
+            border-radius: $radius5;
+            padding-left: 5px;
+            height: 2rem;
+            outline: none;
+            cursor: pointer;
+        }
+        img {
+        max-height: 2rem;
+        height: 100%;
+        width: auto;
+        }
+    }
 }
