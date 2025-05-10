@@ -3,22 +3,16 @@
 @use "../abstracts/mixins.scss" as *;
 
 /* Media Querys */
-
-@media (max-width: 430px) {
-
-    html, .body {
-        max-width: 100%;
-    }
-
+@media (max-width: 992px) {
     .header {
         grid-template-columns: 1fr;
         max-height: 78px;
         transition: max-height 1s ease-in-out;
         overflow-y: hidden;
+        max-width: 100%;
         .menu-opciones, .moneda-usuario {
             display: none;
         }
-        max-width: 100%;
         .buscador {
             max-width:100%;
             display: flex;
@@ -42,6 +36,131 @@
                 }
             }
         }
+    }
+    .header.expandido {
+        max-height: 500px;
+        .menu-opciones, .moneda-usuario {
+            display: flex;
+        }
+    }
+
+/* main index */
+
+
+.main {
+    .banner {
+        span {
+            font-size: 1.1rem;
+            width: 100%;
+        }
+        .span1 {
+            top: 20%;
+        }
+    }
+    .noticias {
+        justify-content: center;
+        max-width: 100%;
+        .titulo {
+            padding-top: 5px;
+        }
+        .videos-ultimas-noticias {
+            grid-template-columns: 1fr;
+            max-width: 100%;
+            .videos {
+                padding-top: 0;
+                // height: 100%;
+                max-width: 100%;
+
+                h4 {
+                    width: 80%;
+                }
+                iframe {
+                    max-width: 100%;
+                    width: auto;
+                    max-height: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .destacados {
+        justify-content: center;
+        max-width: 100%;
+        padding: 5px;
+        .contenedor-cards {
+            grid-template-columns: none;
+            grid-template-rows: 1fr 1fr;
+            max-width: 100%;
+            padding: 5px;
+            .compra-venta, .intercambio {
+                padding: $padding10;
+                .cards {
+                    padding: $padding10;
+                    border: none;
+                    gap: 10px;
+                    .contenido-card {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-bottom: 5px dotted white;
+                        border-radius: $radius-cartas;
+                        :last-child {
+                            border-bottom: none;
+                        }
+                        img {
+                            margin-top: 5px;
+                            max-width: 95%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+
+    .footer {
+        padding: 10px;
+        .links,
+        .redes {
+            justify-content: flex-start;
+            h2 {
+                font-size: 1.3rem;
+                width: 100%;
+            }
+        }
+        .links ul {
+            flex-direction: column;
+            width: 80%;
+        }
+        .redes ul {
+            width: 80%;
+            justify-content: space-between;
+            li {
+                padding: 0;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+/* Media Querys 768px ---------------------------------------------------*/
+@media (max-width: 768px) {
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Media Querys 430px ---------------------------------------------------*/
+@media (max-width: 576px) {
+
+    .header {
+        grid-template-columns: 1fr;
+
         > div, > nav {
             align-items: flex-start;
             padding: 5px;
@@ -59,15 +178,9 @@
 
         }
     }
-    .header.expandido {
-        max-height: 500px;
-        .menu-opciones, .moneda-usuario {
-            display: flex;
-        }
-    }
 
 
-    /* === MAIN === */
+/* Media Querys 430px ---------------------------------------------------*/
     .main {
         grid-template-rows: auto 1fr;
         .banner {
@@ -98,42 +211,41 @@
                 }
             }
         }
-    }
-
-    /* --- Destacados --- */
-    .destacados {
-        justify-content: center;
-        max-width: 100%;
-        padding: 5px;
-        .contenedor-cards {
-            grid-template-columns: 1fr;
-            max-width: 100%;
-            padding: 5px;
-        }
-        .compra-venta,
-        .intercambio {
-            padding: $padding10;
-            .cards {
+        .destacados {
+            .contenedor-cards {
+                grid-template-rows: none;
                 grid-template-columns: 1fr;
-                padding: $padding10;
-                border: none;
-                .contenido-card {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    align-items: center;
-                    border-bottom: 5px dotted white;
-                    border-radius: 0;
-                    :last-child {
-                        border-bottom: none;
-                    }
-                    img {
-                        max-width: 95%;
+                .compra-venta, .intercambio {
+                    max-width: 100%;
+                    width: 100%;
+                    .cards {
+                        grid-template-columns: 1fr;
+                        padding: $padding10;
+                        border: none;
+                        gap: 10px;
+                        .contenido-card {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            align-items: center;
+                            border-bottom: 5px dotted white;
+                            border-radius: $radius-cartas;
+                            :last-child {
+                                border-bottom: none;
+                            }
+                            img {
+                                margin-top: 5px;
+                                max-width: 95%;
+                            }
+                        }
                     }
                 }
             }
+    
         }
     }
+
+    /* --- Destacados --- */
 
     .contenedor-cards section h3,
     .contenido-card h5 {
@@ -181,7 +293,7 @@
             .formulario {
                 overflow-x: hidden;
                 grid-template-columns: 1fr 1fr;
-                grid-template-areas: 
+                grid-template-areas:
                 'label1 label1'
                 'text1 text1'
                 'label2 label2'

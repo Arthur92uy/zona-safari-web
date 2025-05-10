@@ -16,11 +16,12 @@
         text-align: center;
     }
     .videos-ultimas-noticias {
+        color: $bg-seccion-main-2-0150;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
         padding: 0 35px;
-        height: 100%;
+        // height: 100%;
         .videos {
             display: flex;
             flex-direction: column;
@@ -30,7 +31,8 @@
             padding-top: 20px;
             iframe {
                 border: $border-negro;
-                width: 100%;
+                padding: 10px;
+                width: 100% !important;
                 height: auto;
                 aspect-ratio: 16 / 9;
             }
@@ -74,7 +76,7 @@
                 .contenido-card {
                     text-align: center;
                     background-color: $bg-seccion-main-1-0150;
-                    color: $texto-seccion-main-1-0150;
+                    color: $bg-seccion-main-2-0150;
                     border-radius: $radius-cartas;
                     padding: 5px 5px 0 5px;
                     h3 {

@@ -4,29 +4,30 @@
 
 /* Estilos del Main Catalogo y sus componentes */
 
-.header-charizard, .footer-charizard {
+.header.header-charizard {
     background-color: $bg-header-footer-0006;
+    .buscador-form, .input-con-boton {
+        input[type="search"]#buscar.buscador-charizard{
+            color: $bg-header-footer-0006;
+            &::placeholder {
+                color: $bg-header-footer-0006;
+            }
+        }
+        button{
+            background-color: $bg-header-footer-0006;
+        }
+    }
+    .moneda-usuario .select-moneda-charizard {
+        color: $bg-header-footer-0006;
+    }
+
 }
 
-.header-charizard button {
-    color: $texto-header-footer-0006;
-    background-color: $bg-header-footer-0006;
-}
-
-#buscar.buscador-charizard, #buscar.buscador-charizard::placeholder{
-    color: $bg-header-footer-0006;
-}
-
-.select-moneda-charizard {
-    color: $bg-header-footer-0006;
-}
-
-.banner .span-charizard, .banner .span-charizard {
-    color: $color-destacar-0006;
-    @include tshadow(rgba(255, 255, 255, 0.5));
-}
-
-.main-ofertas {
+.main.main-ofertas {
+    .banner .span-charizard {
+        color: $color-destacar-0006;
+        @include tshadow(rgba(255, 255, 255, 0.5));
+    }
     display: grid;
     grid-template-rows: auto 1fr;
     gap: $gap10;
@@ -44,60 +45,61 @@
             border-radius: $radius5;
             background-color: $bg-seccion-main-2-0006;
             border: $border-blanco;
-            grid-template-columns: none;
+            // grid-template-columns: none;
             .div-img-producto-ofertas {
                 padding: 10 0;
                 display: flex;
-            }
-            .div-detalles-producto-ofertas {
-                display: grid;
-                grid-template-rows: 0.7fr 4fr 2.3fr;
-                .nps-ofertas, .detalles-ofertas, .ataque-ofertas {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    align-items: flex-start;
-                    color: $texto-seccion-main-2-0006;
-                    padding-top: 5px;
-                    padding-left: 5px;
-                }
-                .nps-ofertas {
-                    flex-direction: row;
-                    justify-content: space-around;
-                    align-items: center;
-                }
             }
             .ofertas-producto {
                 background-color: transparent;
                 display: grid;
                 grid-template-columns: 3fr 4fr 5fr;
                 border-radius: $radius5;
-                border: $border-blanco;
-            }
-            .grafica {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: $texto-seccion-main-2-0006;
-                max-width: 100%;
-                max-height: 100%;
-                border: $border-blanco;
-                margin: 10px;
-                border-radius: $radius5;
+                .div-detalles-producto-ofertas {
+                    display: grid;
+                    grid-template-rows: 0.7fr 4fr 2.3fr;
+                    .nps-ofertas, .detalles-ofertas, .ataque-ofertas {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        align-items: flex-start;
+                        color: $texto-seccion-main-2-0006;
+                        padding-top: 5px;
+                        padding-left: 5px;
+                    }
+                    .nps-ofertas {
+                        flex-direction: row;
+                        justify-content: space-around;
+                        align-items: center;
+                    }   
+                }
+                .grafica {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $texto-seccion-main-2-0006;
+                    max-width: 100%;
+                    max-height: 100%;
+                    border: $border-blanco;
+                    margin: 10px;
+                    border-radius: $radius5;
+                }
             }
         }
         .contenedor-tabla {
             max-width: 100%;
+            width: 100%;
             color: $texto-seccion-main-2-0006;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 10px;
             table {
                 display: table;
                 border-collapse: separate;
                 border-spacing: 0;
                 max-width: 100%;
-                margin: 10px;
+                width: 100%;
                 border: $border-blanco;
                 border-radius: $radius5;
                 overflow: hidden;
@@ -125,4 +127,8 @@
             }
         }
     }
+}
+
+.footer-charizard {
+    background-color: $bg-header-footer-0006;
 }

@@ -4,24 +4,32 @@
 
 /* Estilos del Main Contacto y sus componentes */
 
-.header-squirtle, .footer-squirtle {
+.header.header-squirtle {
+    background-color: $bg-header-footer-0007;
+    .buscador-form, .input-con-boton {
+        input[type="search"]#buscar.buscador-squirtle{
+            color: $bg-header-footer-0007;
+            &::placeholder {
+                color: $bg-header-footer-0007;
+            }
+        }
+        button{
+            background-color: $bg-header-footer-0007;
+        }
+    }
+    .moneda-usuario .select-moneda-squirtle {
+        color: $bg-header-footer-0007;
+    }
+
+}
+
+
+.footer-squirtle {
     background-color: $bg-header-footer-0007;
 }
 
-.header-squirtle button {
-    color: $texto-header-footer-0007;
-    background-color:  $bg-header-footer-0007;
-}
 
-#buscar.buscador-squirtle, #buscar.buscador-squirtle::placeholder{
-    color: $bg-header-footer-0007;
-}
-
-.select-moneda-squirtle {
-    color: $bg-header-footer-0007;
-}
-
-.banner .span-squirtle, .banner .span-squirtle {
+.main .banner .span-squirtle, .main .banner .span-squirtle {
     color: $color-destacar-0007;
     @include tshadow(rgba(255, 255, 255, 0.5));
 }
@@ -98,13 +106,13 @@
                     align-items: flex-start;
                 }
                 .button1{
-                    @include boton-contacto(button1, flex-end, 0 10px 10px 10px);
+                    @include boton-contacto(button1, flex-end, 0);
                     input {
                         @include boton-1($color-destacar-0007, $border-blanco, $texto-seccion-main-2-0007, $radius5, 152px);
                     }
                 }
                 .button2{
-                    @include boton-contacto(button2, flex-start, 0 10px 10px 10px);
+                    @include boton-contacto(button2, flex-start, 0);
                     input {
                         @include boton-1($color-destacar-0007, $border-blanco, $texto-seccion-main-2-0007, $radius5, 152px);
                     }
