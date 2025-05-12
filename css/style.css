@@ -145,6 +145,11 @@ p {
   height: 2rem;
   font-size: 1rem;
 }
+.header .buscador-form .input-con-boton button img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
 .header .buscador-form .input-con-boton input[type=search] {
   width: 100%;
   outline: none;

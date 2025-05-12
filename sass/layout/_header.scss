@@ -38,6 +38,11 @@
             padding: 0;
             button {
                 @include boton-1($bg-header-footer-0150, $border-blanco, $texto-header-footer-0150, $radius5, 2rem);
+                img {
+                    max-width: 100%;
+                    width: 100%;
+                    height: auto;
+                }
             }
             input[type="search"] {
                 width: 100%;
@@ -56,6 +61,9 @@
                 box-shadow: none;
             }
         }
+        // &::placeholder {
+        //     background-color: $texto-header-footer-0150;
+        // }
         .visually-hidden {
             position: absolute;
             left: -10000px;
