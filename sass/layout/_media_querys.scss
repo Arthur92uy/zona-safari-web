@@ -146,12 +146,16 @@
     }
 }
 
+
+
+
+
 /* Media Querys 768px ---------------------------------------------------*/
 @media (max-width: 768px) {
 
 .main-contacto {
     .contenedor-contacto {
-        .formulario {
+        .form .formulario {
             grid-template-areas: 
             'label1 text1'
             'label2 text2'
@@ -307,10 +311,8 @@
 
 
 .main-contacto {
-    // overflow-x: hidden;
-    max-width: 100%;
     .contenedor-contacto {
-        form {
+        .form {
             padding: 5px;
             border: 1px solid black;
             .formulario {

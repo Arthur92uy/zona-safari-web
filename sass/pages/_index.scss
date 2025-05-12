@@ -21,7 +21,6 @@
         grid-template-columns: 1fr 1fr;
         gap: 20px;
         padding: 0 35px;
-        // height: 100%;
         .videos {
             display: flex;
             flex-direction: column;
@@ -31,7 +30,6 @@
             padding-top: 20px;
             iframe {
                 border: $border-negro;
-                padding: 10px;
                 width: 100% !important;
                 height: auto;
                 aspect-ratio: 16 / 9;

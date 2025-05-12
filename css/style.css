@@ -155,6 +155,7 @@ p {
 }
 .header .buscador-form .input-con-boton #buscar::placeholder {
   color: #C292BA;
+  background-color: #ffffff;
 }
 .header .buscador-form .input-con-boton button:hover, .header .buscador-form .input-con-boton button:focus, .header .buscador-form .input-con-boton button:active {
   outline: none;
@@ -336,7 +337,6 @@ p {
 }
 .noticias .videos-ultimas-noticias .videos iframe {
   border: 1px solid black;
-  padding: 10px;
   width: 100% !important;
   height: auto;
   aspect-ratio: 16/9;
@@ -539,10 +539,6 @@ p {
   color: #008CC4;
 }
 
-.footer-squirtle {
-  background-color: #008CC4;
-}
-
 .main .banner .span-squirtle, .main .banner .span-squirtle {
   color: #9A7C74;
   text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.5), 1px -1px 1px rgba(255, 255, 255, 0.5), -1px 1px 1px rgba(255, 255, 255, 0.5), 1px 1px 1px rgba(255, 255, 255, 0.5);
@@ -573,7 +569,7 @@ p {
   align-items: center;
   width: 100%;
 }
-.main-contacto .contenedor-contacto .formulario {
+.main-contacto .contenedor-contacto .form .formulario {
   display: grid;
   width: 100%;
   grid-template-areas: "label1 text1 label2 text2" "label3 text3 label4 text4" "label5 text5 text5 text5" "button1 button1 button2 button2";
@@ -581,54 +577,54 @@ p {
   padding: 20px;
   border: none;
 }
-.main-contacto .contenedor-contacto .formulario .label1 {
+.main-contacto .contenedor-contacto .form .formulario .label1 {
   grid-area: label1;
 }
-.main-contacto .contenedor-contacto .formulario .label2 {
+.main-contacto .contenedor-contacto .form .formulario .label2 {
   grid-area: label2;
 }
-.main-contacto .contenedor-contacto .formulario .label3 {
+.main-contacto .contenedor-contacto .form .formulario .label3 {
   grid-area: label3;
 }
-.main-contacto .contenedor-contacto .formulario .label4 {
+.main-contacto .contenedor-contacto .form .formulario .label4 {
   grid-area: label4;
 }
-.main-contacto .contenedor-contacto .formulario .label5 {
+.main-contacto .contenedor-contacto .form .formulario .label5 {
   grid-area: label5;
 }
-.main-contacto .contenedor-contacto .formulario .text1 {
+.main-contacto .contenedor-contacto .form .formulario .text1 {
   grid-area: text1;
 }
-.main-contacto .contenedor-contacto .formulario .text2 {
+.main-contacto .contenedor-contacto .form .formulario .text2 {
   grid-area: text2;
 }
-.main-contacto .contenedor-contacto .formulario .text3 {
+.main-contacto .contenedor-contacto .form .formulario .text3 {
   grid-area: text3;
 }
-.main-contacto .contenedor-contacto .formulario .text4 {
+.main-contacto .contenedor-contacto .form .formulario .text4 {
   grid-area: text4;
 }
-.main-contacto .contenedor-contacto .formulario .text5 {
+.main-contacto .contenedor-contacto .form .formulario .text5 {
   grid-area: text5;
 }
-.main-contacto .contenedor-contacto .formulario section {
+.main-contacto .contenedor-contacto .form .formulario section {
   display: flex;
   align-items: center;
 }
-.main-contacto .contenedor-contacto .formulario section label {
+.main-contacto .contenedor-contacto .form .formulario section label {
   color: #ffffff;
 }
-.main-contacto .contenedor-contacto .formulario .label5 {
+.main-contacto .contenedor-contacto .form .formulario .label5 {
   display: flex;
   align-items: flex-start;
 }
-.main-contacto .contenedor-contacto .formulario .button1 {
+.main-contacto .contenedor-contacto .form .formulario .button1 {
   grid-area: button1;
   display: flex;
   justify-content: flex-end;
   padding: 0;
 }
-.main-contacto .contenedor-contacto .formulario .button1 input {
+.main-contacto .contenedor-contacto .form .formulario .button1 input {
   background-color: #9A7C74;
   border: 1px solid white;
   color: #ffffff;
@@ -642,13 +638,13 @@ p {
   height: 2rem;
   font-size: 1rem;
 }
-.main-contacto .contenedor-contacto .formulario .button2 {
+.main-contacto .contenedor-contacto .form .formulario .button2 {
   grid-area: button2;
   display: flex;
   justify-content: flex-start;
   padding: 0;
 }
-.main-contacto .contenedor-contacto .formulario .button2 input {
+.main-contacto .contenedor-contacto .form .formulario .button2 input {
   background-color: #9A7C74;
   border: 1px solid white;
   color: #ffffff;
@@ -662,7 +658,7 @@ p {
   height: 2rem;
   font-size: 1rem;
 }
-.main-contacto .contenedor-contacto .formulario .formato-input, .main-contacto .contenedor-contacto .formulario .select.formato-input {
+.main-contacto .contenedor-contacto .form .formulario .formato-input, .main-contacto .contenedor-contacto .form .formulario .select.formato-input {
   width: 100%;
   height: 38px;
   font-size: 1rem;
@@ -672,11 +668,15 @@ p {
   border-radius: 5px;
   padding: 5px;
 }
-.main-contacto .contenedor-contacto .formulario .formato-input-textarea {
+.main-contacto .contenedor-contacto .form .formulario .formato-input-textarea {
   height: 100%;
 }
-.main-contacto .contenedor-contacto .formulario .formato-input-textarea::placeholder, .main-contacto .contenedor-contacto .formulario .formato-input::placeholder {
+.main-contacto .contenedor-contacto .form .formulario .formato-input-textarea::placeholder, .main-contacto .contenedor-contacto .form .formulario .formato-input::placeholder {
   color: #008CC4;
+}
+
+.footer-squirtle {
+  background-color: #008CC4;
 }
 
 /* Estilos del main nosotros y sus componentes */
@@ -1018,7 +1018,7 @@ p {
 }
 /* Media Querys 768px ---------------------------------------------------*/
 @media (max-width: 768px) {
-  .main-contacto .contenedor-contacto .formulario {
+  .main-contacto .contenedor-contacto .form .formulario {
     grid-template-areas: "label1 text1" "label2 text2" "label3 text3" "label4 text4" "label5 label5" "text5 text5" "button1 button2";
   }
   .footer .links, .footer .redes {
@@ -1135,27 +1135,24 @@ p {
   }
   /* === FOOTER === */
   /* Formulario de contacto */
-  .main-contacto {
-    max-width: 100%;
-  }
-  .main-contacto .contenedor-contacto form {
+  .main-contacto .contenedor-contacto .form {
     padding: 5px;
     border: 1px solid black;
   }
-  .main-contacto .contenedor-contacto form .formulario {
+  .main-contacto .contenedor-contacto .form .formulario {
     overflow-x: hidden;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "label1 label1" "text1 text1" "label2 label2" "text2 text2" "label3 label3" "text3 text3" "label4 label4" "text4 text4" "label5 label5" "text5 text5" "button1 button2";
     width: 100%;
     padding: 5px;
   }
-  .main-contacto .contenedor-contacto form .formulario .button1 input, .main-contacto .contenedor-contacto form .formulario .button2 input {
+  .main-contacto .contenedor-contacto .form .formulario .button1 input, .main-contacto .contenedor-contacto .form .formulario .button2 input {
     width: 100%;
     max-width: 152px;
     align-items: center;
     justify-content: center;
   }
-  .main-contacto .contenedor-contacto form .formulario .label1, .main-contacto .contenedor-contacto form .formulario .label2, .main-contacto .contenedor-contacto form .formulario .label3, .main-contacto .contenedor-contacto form .formulario .label4, .main-contacto .contenedor-contacto form .formulario .label5 {
+  .main-contacto .contenedor-contacto .form .formulario .label1, .main-contacto .contenedor-contacto .form .formulario .label2, .main-contacto .contenedor-contacto .form .formulario .label3, .main-contacto .contenedor-contacto .form .formulario .label4, .main-contacto .contenedor-contacto .form .formulario .label5 {
     align-items: flex-start;
     justify-content: flex-start;
   }
