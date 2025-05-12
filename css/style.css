@@ -130,6 +130,7 @@ p {
   max-height: 2rem;
   width: 100%;
   padding: 0;
+  background-color: #ffffff;
 }
 .header .buscador-form .input-con-boton button {
   background-color: #C292BA;
@@ -685,25 +686,24 @@ p {
 }
 
 /* Estilos del main nosotros y sus componentes */
-.header-pikachu, .footer-pikachu {
+.header.header-pikachu {
   background-color: #E7C774;
 }
-
-.header-pikachu button {
-  color: #ffffff;
+.header.header-pikachu .buscador-form input[type=search]#buscar.buscador-pikachu, .header.header-pikachu .input-con-boton input[type=search]#buscar.buscador-pikachu {
+  color: #E7C774;
+}
+.header.header-pikachu .buscador-form input[type=search]#buscar.buscador-pikachu::placeholder, .header.header-pikachu .input-con-boton input[type=search]#buscar.buscador-pikachu::placeholder {
+  color: #E7C774;
+}
+.header.header-pikachu .buscador-form button, .header.header-pikachu .input-con-boton button {
   background-color: #E7C774;
 }
-
-#buscar.buscador-pikachu, #buscar.buscador-pikachu::placeholder {
+.header.header-pikachu .moneda-usuario .select-moneda-pikachu {
   color: #E7C774;
 }
 
-.select-moneda-pikachu {
-  color: #E7C774;
-}
-
-.banner .span-pikachu, .banner .span-pikachu {
-  color: #E7C774;
+.main .banner .span-pikachu, .main .banner .span-pikachu {
+  color: #E3735F;
   text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.5), 1px -1px 1px rgba(255, 255, 255, 0.5), -1px 1px 1px rgba(255, 255, 255, 0.5), 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
@@ -734,8 +734,14 @@ p {
 .main-nosotros .contenedor-nosotros .nosotros .texto1 {
   grid-area: texto1;
 }
+.main-nosotros .contenedor-nosotros .nosotros .imagen1 {
+  grid-area: imagen1;
+}
 .main-nosotros .contenedor-nosotros .nosotros .texto2 {
   grid-area: texto2;
+}
+.main-nosotros .contenedor-nosotros .nosotros .imagen2 {
+  grid-area: imagen2;
 }
 .main-nosotros .contenedor-nosotros .nosotros .imagen1, .main-nosotros .contenedor-nosotros .nosotros .imagen2 {
   display: flex;
@@ -744,24 +750,34 @@ p {
 }
 .main-nosotros .contenedor-nosotros .nosotros .imagen1 img, .main-nosotros .contenedor-nosotros .nosotros .imagen2 img {
   width: 100%;
+  max-width: 290px;
+  height: auto;
+  aspect-ratio: 1/1;
   border-radius: 17px;
   border: 1px solid #84623D;
 }
-.main-nosotros .contenedor-nosotros .nosotros .imagen2 {
-  grid-area: imagen2;
-}
-.main-nosotros .contenedor-nosotros .nosotros .imagen1 {
-  grid-area: imagen1;
-}
-.main-nosotros .contenedor-nosotros .nosotros .texto2, .main-nosotros .contenedor-nosotros .nosotros .texto1 {
+.main-nosotros .contenedor-nosotros .nosotros .texto1, .main-nosotros .contenedor-nosotros .nosotros .texto2 {
   color: #84623D;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 15px;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 17px;
+}
+.main-nosotros .contenedor-nosotros .nosotros .texto1 p:nth-child(2), .main-nosotros .contenedor-nosotros .nosotros .texto2 p:nth-child(2) {
+  padding: 10px 0;
+}
+.main-nosotros .contenedor-nosotros .nosotros .texto1 p:nth-child(3), .main-nosotros .contenedor-nosotros .nosotros .texto2 p:nth-child(3) {
+  padding: 0 0 10px 0;
+}
+.main-nosotros .contenedor-nosotros .nosotros .texto1 p, .main-nosotros .contenedor-nosotros .nosotros .texto2 p {
+  padding-bottom: 0;
+}
+
+.footer-pikachu {
+  background-color: #E7C774;
 }
 
 /* Estilos del Main Catalogo y sus componentes */
@@ -1000,7 +1016,7 @@ p {
     max-width: 95%;
   }
   .footer {
-    padding: 10px;
+    padding: 10px 20px;
   }
   .footer .links, .footer .redes {
     justify-content: flex-start;
@@ -1042,6 +1058,11 @@ p {
     height: 100%;
     justify-content: center;
     align-items: center;
+  }
+  /* Media Querys 768px NOSOTROS ---------------------------------------------------*/
+  .main-nosotros .contenedor-nosotros .nosotros {
+    display: grid;
+    grid-template-areas: "texto1" "imagen1" "texto2" "imagen2";
   }
 }
 /* Media Querys 576px ---------------------------------------------------*/
@@ -1138,7 +1159,6 @@ p {
   .contenido-card h5 {
     padding: 0 0 0 5px;
   }
-  /* === FOOTER === */
   /* Formulario de contacto */
   .main-contacto .contenedor-contacto .form {
     padding: 5px;
@@ -1160,9 +1180,6 @@ p {
   .main-contacto .contenedor-contacto .form .formulario .label1, .main-contacto .contenedor-contacto .form .formulario .label2, .main-contacto .contenedor-contacto .form .formulario .label3, .main-contacto .contenedor-contacto .form .formulario .label4, .main-contacto .contenedor-contacto .form .formulario .label5 {
     align-items: flex-start;
     justify-content: flex-start;
-  }
-  .main-nosotros .contenedor-nosotros .nosotros {
-    grid-template-areas: "texto1" "imagen1" "texto2" "imagen2";
   }
   .main-catalogo .contenedor-catalogo .catalogo {
     grid-template-columns: 1fr;

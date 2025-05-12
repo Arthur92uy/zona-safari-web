@@ -4,25 +4,26 @@
 
 /* Estilos del main nosotros y sus componentes */
 
-.header-pikachu, .footer-pikachu {
+.header.header-pikachu {
     background-color: $bg-header-footer-0025;
+    .buscador-form, .input-con-boton {
+        input[type="search"]#buscar.buscador-pikachu{
+            color: $bg-header-footer-0025;
+            &::placeholder {
+                color: $bg-header-footer-0025;
+            }
+        }
+        button{
+            background-color: $bg-header-footer-0025;
+        }
+    }
+    .moneda-usuario .select-moneda-pikachu {
+        color: $bg-header-footer-0025;
+    }
 }
 
-.header-pikachu button {
-    color: $texto-header-footer-0025;
-    background-color: $bg-header-footer-0025;
-}
-
-#buscar.buscador-pikachu, #buscar.buscador-pikachu::placeholder{
-    color: $bg-header-footer-0025;
-}
-
-.select-moneda-pikachu {
-    color: $bg-header-footer-0025;
-}
-
-.banner .span-pikachu, .banner .span-pikachu {
-    color: $bg-header-footer-0025;
+.main .banner .span-pikachu, .main .banner .span-pikachu {
+    color: $color-destacar-0025;
     @include tshadow(rgba(255, 255, 255, 0.5));
 }
 
@@ -37,8 +38,8 @@
         .nosotros {
             display: grid;
             grid-template-areas: 
-            'texto1 imagen1'
-            'imagen2 texto2';
+            "texto1 imagen1"
+            "imagen2 texto2";
             gap: 30px;
             background-color: $bg-seccion-main-2-0025;
             padding: 20px;
@@ -47,8 +48,14 @@
             .texto1 {
                 grid-area: texto1;
             }
+            .imagen1 {
+                grid-area: imagen1;
+            }
             .texto2 {
                 grid-area: texto2;
+            }
+            .imagen2 {
+                grid-area: imagen2;
             }
             .imagen1, .imagen2 {
                 display: flex;
@@ -56,27 +63,38 @@
                 justify-content: center;
                 img {
                     width: 100%;
+                    max-width: 290px;
+                    height: auto;
+                    aspect-ratio: 1 / 1;
                     border-radius: $radius-cartas;
                     border: 1px solid $texto-seccion-main-2-0025;
                 }
             }
-            .imagen2 {
-                grid-area: imagen2;
-            }
-            .imagen1 {
-                grid-area: imagen1;
-            }
-            .texto2, .texto1 {
+
+            .texto1, .texto2 {
                 color: $texto-seccion-main-2-0025;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                padding: $padding10;
+                padding: 15px;
                 background-color: rgba(255, 255, 255, 0.7);
                 border-radius: $radius-cartas;
+                p:nth-child(2) {
+                    padding: 10px 0;
+                }
+                p:nth-child(3) {
+                    padding: 0 0 10px 0;
+                }
+                p {
+                    padding-bottom: 0;
+                }
             }
             
         }
     }
+}
+
+.footer-pikachu {
+    background-color: $bg-header-footer-0025;
 }

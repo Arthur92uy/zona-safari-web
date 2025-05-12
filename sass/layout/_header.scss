@@ -36,6 +36,7 @@
             max-height: 2rem;
             width: 100%;
             padding: 0;
+            background-color: $texto-header-footer-0150;
             button {
                 @include boton-1($bg-header-footer-0150, $border-blanco, $texto-header-footer-0150, $radius5, 2rem);
                 img {
