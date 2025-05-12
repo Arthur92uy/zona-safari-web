@@ -22,12 +22,11 @@
     }
 }
 
-.main .banner .span-pikachu, .main .banner .span-pikachu {
+.main-nosotros {
+    .banner .span-pikachu, .banner .span-pikachu {
     color: $color-destacar-0025;
     @include tshadow(rgba(255, 255, 255, 0.5));
-}
-
-.main-nosotros {
+    }
     grid-template-rows: auto 1fr;
     .contenedor-nosotros {
         @include contenedor-secciones($border-negro);
@@ -70,7 +69,6 @@
                     border: 1px solid $texto-seccion-main-2-0025;
                 }
             }
-
             .texto1, .texto2 {
                 color: $texto-seccion-main-2-0025;
                 display: flex;
@@ -90,7 +88,6 @@
                     padding-bottom: 0;
                 }
             }
-            
         }
     }
 }

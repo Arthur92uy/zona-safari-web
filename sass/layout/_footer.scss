@@ -24,21 +24,18 @@
             justify-content: space-around;
         }
     }
-}
-
-.links ul li a {
+    .links ul li a {
     text-decoration: underline;
     color: $texto-header-footer-0150;
-}
-
-.redes ul {
-    justify-content: flex-end;
-    li {
-        padding-left: 20px;
     }
-}
-
-.redes ul li a img {
-    width: 45px;
-    height: 45px;
+    .redes ul {
+    justify-content: flex-end;
+        li {
+            padding-left: 20px;
+            a img {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
 }
