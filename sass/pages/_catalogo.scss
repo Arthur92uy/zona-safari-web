@@ -1,7 +1,6 @@
 @use "../abstracts/variables" as *;
 @use "../base/paletas" as *;
 @use "../abstracts/mixins.scss" as *;
-
 /* Estilos del main catalogo y sus componentes */
 
 .header.header-bulbasaur {
@@ -21,103 +20,99 @@
         color: $bg-header-footer-0001;
     }
 }
-
-
-
-.main .banner .span-bulbasaur {
-    color: $color-destacar-0001;
-    @include tshadow(rgba(255, 255, 255, 0.5));
-}
-
 .main-catalogo {
     grid-template-rows: auto 1fr;
+    .banner .span-bulbasaur {
+        color: $color-destacar-0001;
+        @include tshadow(rgba(255, 255, 255, 0.5));
+    }
     .contenedor-catalogo {
         @include contenedor-secciones($border-negro);
         background-color: #ffffff;
         padding: 10px;
         justify-content: flex-start;
         color: $texto-seccion-main-1-0001;
-    }
-}
-
-
-
-.catalogo {
-    background-color: transparent;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    width: 100%;
-    max-height: calc(360px*3);
-    overflow-y: scroll;
-    border-radius: $radius5;
-    padding-right: 5px;
-    .producto {
-        background-color: $bg-seccion-main-2-0001;
-        display: grid;
-        grid-template-columns: 3fr 3fr;
-        width: 100%;
-        height: auto;
-        border: 1px solid black;
-        border-radius: 12px;
-        gap: 10px;
-        .div-detalles-producto {
+        .catalogo {
+            background-color: transparent;
             display: grid;
-            grid-template-rows: 1fr 8fr 2 auto;
-            .nombre-ps {
-                display: flex;
-                text-decoration: underline;
-                justify-content: space-evenly;
-            }
-
-            .ataque {
-                max-height: 100px;
-                height: auto;
-                overflow-y: scroll;
-            }
-
-            .div-button {
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                padding: 0 10px 10px 0;
-            }
-
-            .div-button a {
-                text-decoration: none;
-            }
-
-            // .ataque, .detalles {
-            //     padding-left: $padding10;
-            // }
-
-            .nombre-ps, .detalles, .ataque {
-                color: #ffffff;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            gap: 10px;
+            width: 100%;
+            max-height: 100vh;
+            overflow-y: scroll;
+            border-radius: $radius5;
+            padding-right: 5px;
+            .producto {
+                background-color: $bg-seccion-main-2-0001;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                width: 100%;
+                height: fit-content;
+                border: 1px solid black;
+                border-radius: 12px;
+                gap: 10px;
+                aspect-ratio: 565 / 415;
+                h3, h4, h5 {
+                    text-align: left;
+                }
+                .div-detalles-producto {
+                    display: grid;
+                    grid-template-rows: auto 6fr 4fr;
+                    overflow-y: scroll;
+                    .nombre-ps {
+                        display: flex;
+                        text-decoration: underline;
+                        flex-direction: column;
+                    }
+                    .ataque {
+                        max-height: 130px;
+                    }
+                    .div-button {
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        padding: 0 10px 10px 0;
+                    }
+                    .div-button a {
+                        text-decoration: none;
+                    }
+                    .nombre-ps, .detalles, .ataque {
+                        color: #ffffff;
+                    }
+                }
+                .div-img-producto {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px 0 10px 10px;
+                    justify-content: flex-start;
+                    align-items: center;
+                    .img-producto {
+                        aspect-ratio: 255 / 355;
+                        max-width: 255px;
+                        width: 100%;
+                        height: auto;
+                        border: $border-blanco;
+                        border-radius: $radius-cartas;
+                        // box-shadow: 0 0 10px 5px #ffffff;
+                    }
+                    .div-button {   
+                        width: 100%;
+                        padding: 5px 0 0 0;
+                        a {
+                            display: flex;
+                            justify-content: center;
+                            width: 100%;
+                            button {
+                                @include boton-1 ($color-destacar-0001, $border-blanco, $texto-header-footer-0001, $radius5, 152px)
+                            }
+                        }
+                    } 
+                }
             }
         }
     }
-
 }
-.div-img-producto {
-    display: flex;
-    aspect-ratio: 255 / 355;
-    padding: 10px 0 10px 10px;
-    justify-content: center;
-    align-items: center;
-}
-.img-producto {
-
-    max-width: 255px;
-    width: 100%;
-    object-fit: contain;
-    border: $border-blanco;
-    border-radius: $radius-cartas;
-    // box-shadow: 0 0 10px 5px #ffffff;
-}
-
-    .div-button button {
-        @include boton-1 ($color-destacar-0001, $border-blanco, $texto-header-footer-0001, $radius5, 152px)
-    }
     .footer-bulbasaur {
         background-color: $bg-header-footer-0001 ;
     }

@@ -2,7 +2,7 @@
 @use "../base/paletas" as *;
 @use "../abstracts/mixins.scss" as *;
 
-/* Media Querys */
+/* Media Querys 992px ---------------------------------------------------*/
 @media (max-width: 992px) {
     .header {
         grid-template-columns: 1fr;
@@ -44,81 +44,75 @@
             display: flex;
         }
     }
-
-/* main index */
     .main {
-    .banner {
-        span {
-            font-size: 1.1rem;
-            width: 100%;
+        .banner {
+            span {
+                font-size: 1.1rem;
+                width: 100%;
+            }
+            .span1 {
+                top: 20%;
+            }
         }
-        .span1 {
-            top: 20%;
-        }
-    }
-    .noticias {
-        justify-content: center;
-        max-width: 100%;
-        .titulo {
-            padding-top: 5px;
-        }
-        .videos-ultimas-noticias {
-            grid-template-columns: 1fr;
+        .noticias {
+            justify-content: center;
             max-width: 100%;
-            .videos {
-                padding-top: 0;
-                // height: 100%;
+            .titulo {
+                padding-top: 5px;
+            }
+            .videos-ultimas-noticias {
+                grid-template-columns: 1fr;
                 max-width: 100%;
-
-                h4 {
-                    width: 80%;
-                }
-                iframe {
+                .videos {
+                    padding-top: 0;
                     max-width: 100%;
-                    width: auto;
-                    max-height: 100%;
-                    height: auto;
+                    h4 {
+                        width: 80%;
+                    }
+                    iframe {
+                        max-width: 100%;
+                        width: auto;
+                        max-height: 100%;
+                        height: auto;
+                    }
                 }
             }
         }
-    }
-    .destacados {
-        justify-content: center;
-        max-width: 100%;
-        padding: 5px;
-        .contenedor-cards {
-            grid-template-columns: none;
-            grid-template-rows: 1fr 1fr;
+        .destacados {
+            justify-content: center;
             max-width: 100%;
             padding: 5px;
-            .compra-venta, .intercambio {
-                padding: $padding10;
-                .cards {
+            .contenedor-cards {
+                grid-template-columns: none;
+                grid-template-rows: 1fr 1fr;
+                max-width: 100%;
+                padding: 5px;
+                .compra-venta, .intercambio {
                     padding: $padding10;
-                    border: none;
-                    gap: 10px;
-                    .contenido-card {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        align-items: center;
-                        border-bottom: 5px dotted white;
-                        border-radius: $radius-cartas;
-                        :last-child {
-                            border-bottom: none;
-                        }
-                        img {
-                            margin-top: 5px;
-                            max-width: 95%;
+                    .cards {
+                        padding: $padding10;
+                        border: none;
+                        gap: 10px;
+                        .contenido-card {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            align-items: center;
+                            border-bottom: 5px dotted white;
+                            border-radius: $radius-cartas;
+                            :last-child {
+                                border-bottom: none;
+                            }
+                            img {
+                                margin-top: 5px;
+                                max-width: 95%;
+                            }
                         }
                     }
                 }
             }
         }
-
     }
-    }
-
     .footer {
         padding: 10px 20px;
         .links, .redes {
@@ -140,23 +134,27 @@
             }
         }
     }
+    .main-catalogo .contenedor-catalogo .catalogo{
+        grid-template-columns: 1fr;
+        .producto {
+            aspect-ratio: auto;
+            grid-template-columns: 1fr 1fr;
+            .div-img-producto {
+                padding: 10px 0 10px 10px;
+            }
+            .div-detalles-producto {
+                padding: 10px 0 10px 0;
+                grid-template-rows: auto 8fr 2fr;
+                .ataque {
+                    max-height: 20px;
+                }
+            }
+        }
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Media Querys 768px ---------------------------------------------------*/
 @media (max-width: 768px) {
-
 .main-contacto {
     .contenedor-contacto {
         .form .formulario {
@@ -172,7 +170,6 @@
         }
     }
 }
-
     .footer {
         .links, .redes {
             flex-direction: column;
@@ -194,7 +191,7 @@
         }
     }
 
-    /* Media Querys 768px NOSOTROS ---------------------------------------------------*/
+    /* Media Querys 768px NOSOTROS */
     .main-nosotros .contenedor-nosotros .nosotros {
         display: grid;
             grid-template-areas:
@@ -362,21 +359,6 @@
         }
     }
 }
-
-    .main-catalogo .contenedor-catalogo .catalogo{
-        grid-template-columns: 1fr;
-        .producto {
-            grid-template-columns: 1fr;
-            .div-img-producto .img-producto {
-                max-width: 100%;
-                max-height: 100%;
-            }
-            .div-detalles-producto {
-                padding: 0 15px;
-                grid-template-rows: 0.7fr 4.2fr auto;
-            }
-        }
-    }
 
     .main-ofertas .contenedor-ofertas .ofertas-producto .div-detalles-producto {
         grid-template-rows: 0.7fr 4.2fr auto 1.1fr;
