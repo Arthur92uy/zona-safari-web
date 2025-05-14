@@ -152,19 +152,21 @@
 
     /* Media Querys 992px OFERTAS */
     .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto {
-        .div-img-producto {
+        .div-img-producto-ofertas {
             grid-area: img;
             padding: 10px 0 10px 10px;
-        }
-        .div-detalles-producto-ofertas {
-            padding: 10px 0 10px 0;
-            grid-template-rows: auto 8fr 2fr;
-            .ataque {
-                max-height: 20px;
-            }
+            border: $border-blanco;
+            justify-content: center;
+            align-items: center;
         }
         .div-detalles-producto-ofertas {
             grid-area: detail;
+            padding: 10px 0 10px 0;
+            grid-template-rows: auto 8fr 2fr;
+            border: $border-blanco;
+            .ataque {
+                max-height: 20px;
+            }
         }
         .grafica {
             grid-area: graph;
@@ -238,15 +240,13 @@
         'img detail'
         'graph graph';
         .div-img-producto-ofertas {
-            grid-area: img;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            aspect-ratio: 255 / 355;
-            // max-width: 255px;
-            width: 100%;
-            height: auto;
-            padding: 10px 0 10px 10px;
+            // padding: 10px 0 10px 10px;
+            .img-producto{
+                aspect-ratio: 255 / 355;
+                // max-width: 255px;
+                width: 100%;
+                height: auto;
+            }
         }
         .div-detalles-producto-ofertas {
             grid-area: detail;
@@ -271,7 +271,6 @@
         grid-template-columns: 1fr;
         > div, > nav {
             align-items: flex-start;
-            padding: 5px;
         }
         > nav > ul {
             flex-direction: column;
@@ -397,7 +396,4 @@
         }
     }
 }
-    // .main-ofertas .contenedor-ofertas .ofertas-producto .div-detalles-producto {
-    //     grid-template-rows: 0.7fr 4.2fr auto 1.1fr;
-    // }
 }

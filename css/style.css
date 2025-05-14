@@ -855,7 +855,7 @@ p {
   align-items: flex-start;
 }
 .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-img-producto .img-producto {
-  aspect-ratio: 326/455;
+  aspect-ratio: 326/454;
   max-width: 326px;
   width: 100%;
   max-height: 455px;
@@ -870,17 +870,13 @@ p {
 .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-detalles-producto-ofertas .nps-ofertas, .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-detalles-producto-ofertas .detalles-ofertas, .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-detalles-producto-ofertas .ataque-ofertas {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: flex-start;
   color: #ffffff;
-  padding-top: 5px;
   padding-left: 5px;
 }
 .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-detalles-producto-ofertas .ataque-ofertas {
   justify-content: flex-start;
   align-items: flex-start;
-}
-.main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-detalles-producto-ofertas .ataque-ofertas {
   max-height: 130px;
 }
 .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .grafica {
@@ -1092,19 +1088,21 @@ p {
     grid-template-rows: auto 1fr;
     grid-template-areas: "img detail" "graph graph";
   }
-  .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-img-producto {
+  .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-img-producto-ofertas {
     grid-area: img;
     padding: 10px 0 10px 10px;
-  }
-  .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-detalles-producto-ofertas {
-    padding: 10px 0 10px 0;
-    grid-template-rows: auto 8fr 2fr;
-  }
-  .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-detalles-producto-ofertas .ataque {
-    max-height: 20px;
+    border: 1px solid white;
+    justify-content: center;
+    align-items: center;
   }
   .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-detalles-producto-ofertas {
     grid-area: detail;
+    padding: 10px 0 10px 0;
+    grid-template-rows: auto 8fr 2fr;
+    border: 1px solid white;
+  }
+  .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-detalles-producto-ofertas .ataque {
+    max-height: 20px;
   }
   .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .grafica {
     grid-area: graph;
@@ -1150,15 +1148,10 @@ p {
     grid-template-rows: auto auto;
     grid-template-areas: "img detail" "graph graph";
   }
-  .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-img-producto-ofertas {
-    grid-area: img;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-img-producto-ofertas .img-producto {
     aspect-ratio: 255/355;
     width: 100%;
     height: auto;
-    padding: 10px 0 10px 10px;
   }
   .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-detalles-producto-ofertas {
     grid-area: detail;
@@ -1181,7 +1174,6 @@ p {
   }
   .header > div, .header > nav {
     align-items: flex-start;
-    padding: 5px;
   }
   .header > nav > ul {
     flex-direction: column;
@@ -1286,9 +1278,6 @@ p {
   .main-contacto .contenedor-contacto .form .formulario .label1, .main-contacto .contenedor-contacto .form .formulario .label2, .main-contacto .contenedor-contacto .form .formulario .label3, .main-contacto .contenedor-contacto .form .formulario .label4, .main-contacto .contenedor-contacto .form .formulario .label5 {
     align-items: flex-start;
     justify-content: flex-start;
-  }
-  .main-ofertas .contenedor-ofertas .ofertas-producto .div-detalles-producto {
-    grid-template-rows: 0.7fr 4.2fr auto 1.1fr;
   }
 }
 
