@@ -134,14 +134,12 @@
             }
         }
     }
+/* Media Querys 992px CATALOGO */
     .main-catalogo .contenedor-catalogo .catalogo{
         grid-template-columns: 1fr;
         .producto {
             aspect-ratio: auto;
             grid-template-columns: 1fr 1fr;
-            .div-img-producto {
-                padding: 10px 0 10px 10px;
-            }
             .div-detalles-producto {
                 padding: 10px 0 10px 0;
                 grid-template-rows: auto 8fr 2fr;
@@ -150,6 +148,39 @@
                 }
             }
         }
+    }
+
+    /* Media Querys 992px OFERTAS */
+    .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto {
+        .div-img-producto {
+            grid-area: img;
+            padding: 10px 0 10px 10px;
+        }
+        .div-detalles-producto-ofertas {
+            padding: 10px 0 10px 0;
+            grid-template-rows: auto 8fr 2fr;
+            .ataque {
+                max-height: 20px;
+            }
+        }
+        .div-detalles-producto-ofertas {
+            grid-area: detail;
+        }
+        .grafica {
+            grid-area: graph;
+            span {
+                aspect-ratio: 1 / 0.6;
+                height: 50%;
+            }
+        }
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+        'img detail'
+        'graph graph';
+    }
+    table td:nth-child(3), table th:nth-child(3), table td:nth-child(4), table th:nth-child(4), table td:nth-child(8), table th:nth-child(8) {
+        display: none;
     }
 }
 
@@ -190,8 +221,7 @@
             }
         }
     }
-
-    /* Media Querys 768px NOSOTROS */
+/* Media Querys 768px NOSOTROS */
     .main-nosotros .contenedor-nosotros .nosotros {
         display: grid;
             grid-template-areas:
@@ -200,29 +230,45 @@
             'texto2'
             'imagen2';
     }
+/* Media Querys 768px OFERTAS */
+    .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        'img detail'
+        'graph graph';
+        .div-img-producto-ofertas {
+            grid-area: img;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 255 / 355;
+            // max-width: 255px;
+            width: 100%;
+            height: auto;
+            padding: 10px 0 10px 10px;
+        }
+        .div-detalles-producto-ofertas {
+            grid-area: detail;
+            padding: 10px 0 10px 0;
+            grid-template-rows: auto 8fr 2fr;
+            overflow-y: scroll;
+        }
+        .grafica {
+            grid-area: graph;
+            span {
+                aspect-ratio: 1 / 0.6;
+                height: 50%;
+            }
+        }
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Media Querys 576px ---------------------------------------------------*/
 @media (max-width: 576px) {
-
     .header {
         grid-template-columns: 1fr;
-
         > div, > nav {
             align-items: flex-start;
             padding: 5px;
@@ -237,10 +283,8 @@
                     justify-content: flex-start;
                 }
             }
-
         }
     }
-
     .main {
         grid-template-rows: auto 1fr;
         .banner {
@@ -301,11 +345,8 @@
                     }
                 }
             }
-    
         }
     }
-    
-
     .footer {
         grid-template-columns: 1fr;
         .links ul {
@@ -327,9 +368,7 @@
     .contenedor-contacto {
         .form {
             padding: 5px;
-            border: 1px solid black;
             .formulario {
-                overflow-x: hidden;
                 grid-template-columns: 1fr 1fr;
                 grid-template-areas:
                 'label1 label1'
@@ -343,7 +382,6 @@
                 'label5 label5'
                 'text5 text5'
                 'button1 button2';
-                width: 100%;
                 padding: 5px;
                 .button1 input, .button2 input {
                     width: 100%;
@@ -359,9 +397,7 @@
         }
     }
 }
-
-    .main-ofertas .contenedor-ofertas .ofertas-producto .div-detalles-producto {
-        grid-template-rows: 0.7fr 4.2fr auto 1.1fr;
-    }
-
+    // .main-ofertas .contenedor-ofertas .ofertas-producto .div-detalles-producto {
+    //     grid-template-rows: 0.7fr 4.2fr auto 1.1fr;
+    // }
 }

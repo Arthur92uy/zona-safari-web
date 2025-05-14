@@ -20,10 +20,9 @@
     .moneda-usuario .select-moneda-charizard {
         color: $bg-header-footer-0006;
     }
-
 }
 
-.main.main-ofertas {
+.main-ofertas {
     .banner .span-charizard {
         color: $color-destacar-0006;
         @include tshadow(rgba(255, 255, 255, 0.5));
@@ -39,25 +38,37 @@
         color: $texto-seccion-main-1-0006;
         .ofertas {
             display: grid;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: auto 1fr;
             gap: 5px;
             width: 100%;
             border-radius: $radius5;
             background-color: $bg-seccion-main-2-0006;
             border: $border-blanco;
-            // grid-template-columns: none;
-            .div-img-producto-ofertas {
-                padding: 10 0;
-                display: flex;
-            }
             .ofertas-producto {
                 background-color: transparent;
                 display: grid;
-                grid-template-columns: 3fr 4fr 5fr;
+                grid-template-columns: 4fr 4fr 4fr;
                 border-radius: $radius5;
+                gap: 10px;
+                .div-img-producto {
+                    display: flex;
+                    padding: 10px;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    .img-producto {
+                        aspect-ratio: 326 / 455;
+                        max-width: 326px;
+                        width: 100%;
+                        max-height: 455px;
+                        border: $border-blanco;
+                        border-radius: $radius-cartas;
+                        // box-shadow: 0 0 10px 5px #ffffff;
+                    }
+                }
                 .div-detalles-producto-ofertas {
                     display: grid;
-                    grid-template-rows: 0.7fr 4fr 2.3fr;
+                    grid-template-rows: auto 6fr 4fr;
+                    overflow-y: scroll;
                     .nps-ofertas, .detalles-ofertas, .ataque-ofertas {
                         display: flex;
                         flex-direction: column;
@@ -67,22 +78,30 @@
                         padding-top: 5px;
                         padding-left: 5px;
                     }
-                    .nps-ofertas {
-                        flex-direction: row;
-                        justify-content: space-around;
-                        align-items: center;
-                    }   
+                    .ataque-ofertas {
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                    }
+                    .ataque-ofertas {
+                        max-height: 130px;
+                    }
                 }
                 .grafica {
                     display: flex;
-                    justify-content: center;
                     align-items: center;
+                    justify-content: center;
                     color: $texto-seccion-main-2-0006;
-                    max-width: 100%;
-                    max-height: 100%;
-                    border: $border-blanco;
-                    margin: 10px;
+                    border: $border-negro;
+                    padding: 10px;
                     border-radius: $radius5;
+                    span {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        aspect-ratio: 1 / 1;
+                        width: 90%;
+                        border: $border-negro;
+                    }
                 }
             }
         }
@@ -94,6 +113,7 @@
             justify-content: center;
             align-items: center;
             padding: 10px;
+            overflow-y: scroll;
             table {
                 display: table;
                 border-collapse: separate;
@@ -102,14 +122,15 @@
                 width: 100%;
                 border: $border-blanco;
                 border-radius: $radius5;
-                overflow: hidden;
+                overflow-x: scroll;
                 th, td {
                 padding: 10px;
                 text-align: center;
                 border-bottom: $border-blanco;
                 }
                 thead {
-                font-size: 1.5rem;
+                font-size: 1.1rem;
+                text-decoration: underline;
                 background-color: $texto-seccion-main-2-0006;
                 color: $bg-seccion-main-2-0006;
                 }

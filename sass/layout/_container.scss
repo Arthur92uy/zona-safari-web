@@ -20,7 +20,7 @@
     margin: 0 auto;
     padding: $padding10;
     ::-webkit-scrollbar {
-        width: 12px; /* o el ancho que tenga tu scrollbar */
+        width: 5px; /* o el ancho que tenga tu scrollbar */
     }
     ::-webkit-scrollbar-track {
         background: transparent; /* ¡Este es el espacio que se ve feo! */

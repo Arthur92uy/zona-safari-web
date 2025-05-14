@@ -20,11 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
         data.forEach(carta => {
           const fila = `
             <tr>
-              <td>${carta.vendedor}</td>
+              <td>${carta.entrenador}</td>
               <td>${carta.idioma}</td>
               <td>${carta.estado}</td>
               <td>${carta.departamento}</td>
-              <td>${carta.barrio}</td>
               <td>${carta.precio}</td>
               <td>${carta.venta}</td>
               <td>${carta.canje}</td>
