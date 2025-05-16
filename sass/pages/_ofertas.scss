@@ -41,6 +41,8 @@
             grid-template-rows: auto 1fr;
             gap: 5px;
             width: 100%;
+            max-height: 100vh;
+            overflow-y: scroll;
             border-radius: $radius5;
             background-color: $bg-seccion-main-2-0006;
             border: $border-blanco;
@@ -79,7 +81,7 @@
                     .ataque-ofertas {
                         justify-content: flex-start;
                         align-items: flex-start;
-                        max-height: 130px;
+                        max-height: 70px;
                     }
                 }
                 .grafica {
@@ -109,7 +111,6 @@
             justify-content: center;
             align-items: center;
             padding: 10px;
-            overflow-y: scroll;
             table {
                 display: table;
                 border-collapse: separate;
