@@ -42,7 +42,7 @@
             gap: 5px;
             width: 100%;
             max-height: 100vh;
-            overflow-y: scroll;
+            overflow-y: auto;
             border-radius: $radius5;
             background-color: $bg-seccion-main-2-0006;
             border: $border-blanco;
@@ -64,13 +64,12 @@
                         max-height: 455px;
                         border: $border-blanco;
                         border-radius: $radius-cartas;
-                        // box-shadow: 0 0 10px 5px #ffffff;
                     }
                 }
                 .div-detalles-producto-ofertas {
                     display: grid;
                     grid-template-rows: auto 6fr 4fr;
-                    overflow-y: scroll;
+                    overflow-y: auto;
                     .nps-ofertas, .detalles-ofertas, .ataque-ofertas {
                         display: flex;
                         flex-direction: column;
@@ -119,9 +118,9 @@
                 width: 100%;
                 border: $border-blanco;
                 border-radius: $radius5;
-                overflow-x: scroll;
+                overflow-x: auto;
                 th, td {
-                padding: 10px;
+                padding: 5px;
                 text-align: center;
                 border-bottom: $border-blanco;
                 }

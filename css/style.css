@@ -458,7 +458,7 @@ p {
   gap: 10px;
   width: 100%;
   max-height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   border-radius: 5px;
   padding-right: 5px;
 }
@@ -479,7 +479,7 @@ p {
 .main-catalogo .contenedor-catalogo .catalogo .producto .div-detalles-producto {
   display: grid;
   grid-template-rows: auto 6fr 4fr;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .main-catalogo .contenedor-catalogo .catalogo .producto .div-detalles-producto .nombre-ps {
   display: flex;
@@ -838,7 +838,7 @@ p {
   gap: 5px;
   width: 100%;
   max-height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   border-radius: 5px;
   background-color: #FBA867;
   border: 1px solid white;
@@ -867,7 +867,7 @@ p {
 .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-detalles-producto-ofertas {
   display: grid;
   grid-template-rows: auto 6fr 4fr;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-detalles-producto-ofertas .nps-ofertas, .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-detalles-producto-ofertas .detalles-ofertas, .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .div-detalles-producto-ofertas .ataque-ofertas {
   display: flex;
@@ -915,10 +915,10 @@ p {
   width: 100%;
   border: 1px solid white;
   border-radius: 5px;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 .main-ofertas .contenedor-ofertas .contenedor-tabla table th, .main-ofertas .contenedor-ofertas .contenedor-tabla table td {
-  padding: 10px;
+  padding: 5px;
   text-align: center;
   border-bottom: 1px solid white;
 }
@@ -1158,7 +1158,7 @@ p {
     grid-area: detail;
     padding: 10px 0 10px 0;
     grid-template-rows: auto 8fr 2fr;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
   .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto .grafica {
     grid-area: graph;
@@ -1283,6 +1283,12 @@ p {
   .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto {
     grid-template-columns: 1fr;
     grid-template-areas: "img" "detail" "graph";
+  }
+  .main-ofertas .contenedor-ofertas .ofertas .contenedor-tabla {
+    max-height: 500px;
+    overflow-x: auto;
+    overflow-y: auto;
+    display: block;
   }
 }
 

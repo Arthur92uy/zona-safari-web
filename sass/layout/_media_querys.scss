@@ -177,7 +177,6 @@
             }
         }
         grid-template-columns: 1fr 1fr;
-        // grid-template-rows: 1.25fr 0.75fr ;
         grid-template-areas:
         'img detail'
         'graph graph';
@@ -241,10 +240,8 @@
         'img detail'
         'graph graph';
         .div-img-producto-ofertas {
-            // padding: 10px 0 10px 10px;
             .img-producto{
                 aspect-ratio: 255 / 355;
-                // max-width: 255px;
                 width: 100%;
                 height: auto;
             }
@@ -253,7 +250,7 @@
             grid-area: detail;
             padding: 10px 0 10px 0;
             grid-template-rows: auto 8fr 2fr;
-            overflow-y: scroll;
+            overflow-y: auto;
         }
         .grafica {
             grid-area: graph;
@@ -362,72 +359,53 @@
     .contenido-card h5 {
         padding: 0 0 0 5px;
     }
-
 /* Formulario de contacto */
-.main-contacto {
-    .contenedor-contacto {
-        .form {
-            padding: 5px;
-            .formulario {
-                grid-template-columns: 1fr 1fr;
-                grid-template-areas:
-                'label1 label1'
-                'text1 text1'
-                'label2 label2'
-                'text2 text2'
-                'label3 label3'
-                'text3 text3'
-                'label4 label4'
-                'text4 text4'
-                'label5 label5'
-                'text5 text5'
-                'button1 button2';
+    .main-contacto {
+        .contenedor-contacto {
+            .form {
                 padding: 5px;
-                .button1 input, .button2 input {
-                    width: 100%;
-                    max-width: 152px;
-                    align-items: center;
-                    justify-content: center;
-                }
-                .label1, .label2, .label3, .label4, .label5 {
-                    align-items: flex-start;
-                    justify-content: flex-start;
+                .formulario {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas:
+                    'label1 label1'
+                    'text1 text1'
+                    'label2 label2'
+                    'text2 text2'
+                    'label3 label3'
+                    'text3 text3'
+                    'label4 label4'
+                    'text4 text4'
+                    'label5 label5'
+                    'text5 text5'
+                    'button1 button2';
+                    padding: 5px;
+                    .button1 input, .button2 input {
+                        width: 100%;
+                        max-width: 152px;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .label1, .label2, .label3, .label4, .label5 {
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                    }
                 }
             }
         }
     }
-}
-
- .main-ofertas .contenedor-ofertas .ofertas .ofertas-producto {
-        // .div-img-producto-ofertas {
-        //     grid-area: img;
-        //     padding: 10px 0 10px 10px;
-        //     border: $border-blanco;
-        //     justify-content: center;
-        //     align-items: center;
-        // }
-        // .div-detalles-producto-ofertas {
-        //     grid-area: detail;
-        //     padding: 10px 0 10px 0;
-        //     grid-template-rows: auto 8fr 2fr;
-        //     border: $border-blanco;
-        //     .ataque {
-        //         max-height: 20px;
-        //     }
-        // }
-        // .grafica {
-        //     grid-area: graph;
-        //     aspect-ratio: 1 / 0.6;
-        //     span {
-        //         aspect-ratio: 1 / 0.6;
-        //         height: 50%;
-        //     }
-        // }
-        grid-template-columns: 1fr;
-        // grid-template-rows: 1.25fr 0.75fr ;
-        grid-template-areas:
-        'img'
-        'detail'
-        'graph';
+    .main-ofertas .contenedor-ofertas .ofertas {
+        .ofertas-producto {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            'img'
+            'detail'
+            'graph';
+        }
+        .contenedor-tabla {
+            max-height: 500px;
+            overflow-x: auto;
+            overflow-y: auto;
+            display: block;
+        }
     }
 }
