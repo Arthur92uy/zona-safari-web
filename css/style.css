@@ -233,7 +233,7 @@ p {
   outline: none;
   cursor: pointer;
 }
-.header .moneda-usuario img {
+.header .moneda-usuario a img {
   max-height: 2rem;
   height: 100%;
   width: auto;
@@ -415,6 +415,105 @@ p {
   overflow: hidden;
   border-radius: 17px;
   border: 1px solid black;
+}
+
+/* Estilos del Main Contacto y sus componentes */
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.login {
+  background-color: #E3B3CB;
+  color: #ffffff;
+}
+.login .titulo {
+  text-decoration: underline;
+  padding: 10px;
+  text-align: center;
+}
+.login .form {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+.login .form .formulario-login {
+  display: grid;
+  width: 80%;
+  grid-template-areas: "text1 text1" "text2 text2" "button1 button2";
+  gap: 20px;
+  padding: 20px;
+  border: none;
+}
+.login .form .formulario-login .label1 {
+  grid-area: label1;
+}
+.login .form .formulario-login .label2 {
+  grid-area: label2;
+}
+.login .form .formulario-login .text1 {
+  grid-area: text1;
+}
+.login .form .formulario-login .text2 {
+  grid-area: text2;
+}
+.login .form .formulario-login .button1 {
+  grid-area: button1;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+.login .form .formulario-login .button1 input {
+  background-color: #B58BAF;
+  border: 1px solid white;
+  color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  width: 152px;
+  height: 2rem;
+  font-size: 1rem;
+}
+.login .form .formulario-login .button2 {
+  grid-area: button2;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+.login .form .formulario-login .button2 input {
+  background-color: #B58BAF;
+  border: 1px solid white;
+  color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  width: 152px;
+  height: 2rem;
+  font-size: 1rem;
+}
+.login .form .formulario-login .formato-input {
+  width: 100%;
+  height: 38px;
+  font-size: 1rem;
+  font-family: "Roboto Flex", sans-serif;
+  color: #C292BA;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 /* Estilos del main catalogo y sus componentes */

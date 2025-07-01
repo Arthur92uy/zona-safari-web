@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon-32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Inicio de sesión - TCG SAFARI</title>
+</head>
+<body class="body">
+    <div class="container">
+        <header class="header">
+            <div class="buscador">
+                <form class="buscador-form" role="search">
+                    <label for="buscar" class="visually-hidden">Buscar</label>
+                    <div class="input-con-boton">
+                        <input type="search" id="buscar" name="buscar" placeholder="Pika..." aria-label="Buscar">
+                        <button type="submit" aria-label="Buscar">
+                            <img src="../images/magnifying-glass-solid.svg" alt="" width="25" height="25">
+                        </button>
+                    </div>
+                </form>
+                <button id="toggle-header" aria-label="Expandir menú">
+                    <img src="../images/bars-solid.svg" alt="" width="30" height="30">
+                </button>
+            </div>
+            <nav class="menu-opciones">
+                <ul>
+                    <li>
+                        <a href="./catalogo.html">
+                            <img src="../images/favicon-32x32.png" alt="" loading="lazy" width="16" height="16">
+                            Catálogo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./ofertas.html">
+                            <img src="../images/favicon-32x32.png" alt="" loading="lazy" width="16" height="16">
+                            Ofertas
+                        </a>
+                    </li>
+                    <li class="actual marca">
+                        <a href="../index.html">
+                            <img src="../images/favicon-32x32.png" alt="" loading="lazy" width="16" height="16">
+                            TCG SAFARI
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contacto.html">
+                            <img src="../images/favicon-32x32.png" alt="" loading="lazy" width="16" height="16">
+                            Contacto
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./nosotros.html">
+                            <img src="../images/favicon-32x32.png" alt="" loading="lazy" width="16" height="16">
+                            Nosotros
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="moneda-usuario">
+                <div>
+                    <label for="moneda">Divisa: </label>
+                    <select name="moneda" id="moneda" class="select-moneda">
+                        <option value="USD" selected>USD</option>
+                        <option value="UYU">UYU</option>
+                    </select>
+                </div>
+                <a><img src="../images/circle-user-regular.svg" alt="Avatar de usuario" loading="lazy" width="38" height="38"></a>
+            </div>
+        </header>
+        <main class="main">
+            <section class="banner">
+                <img src="../images/banner_pokemon.jpg" alt="" loading="lazy">
+                <span class="span1">TCG SAFARI</span>
+                <span class="span2">El lugar donde puedes atraparlos a todos!</span>
+            </section>
+            <section class="login">
+                <div class="titulo">
+                    <h1>Inicio de sesión</h1>
+                </div>
+                <form action="" method="" class="form" name="login">
+                    <fieldset class="formulario-login">
+                        <!-- <section class="label1">
+                            <label for="email">Correo electrónico/ Nickname:</label>
+                        </section> -->
+                        <section class="text1">
+                            <input type="email" id="email" name="email" class="formato-input" placeholder="Correo electrónico/ Nickname">
+                        </section>
+                        <!-- <section class="label2">
+                            <label for="email">Contraseña:</label>
+                        </section> -->
+                        <section class="text2">
+                            <input type="password" id="password" name="password" class="formato-input" placeholder="Contraseña">
+                        </section>
+                        <section class="button1">
+                            <input type="submit" value="Inicio">
+                        </section>
+                        <section class="button2">
+                            <input type="reset" value="Limpiar">
+                        </section>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <footer class="footer">
+            <section class="links">
+                <h2>Sitios de Interés</h2>
+                <ul>
+                    <li><a href="https://www.xuruguay.com.uy/" target="_blank" rel="noopener noreferrer">XUruguay</a></li>
+                    <li><a href="https://mornarstore.com/index.php" target="_blank" rel="noopener noreferrer">MornarStore</a></li>
+                    <li><a href="https://guaridacorp.com/" target="_blank" rel="noopener noreferrer">Guarida Corp.</a></li>
+                </ul>
+            </section>
+            <section class="redes">
+                <h2>Redes Sociales</h2>
+                <ul>
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" title="Link de Instagram"><img src="../images/square-instagram-brands-solid.svg" alt="Icono de Instagram" loading="lazy"></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Link de Facebook"><img src="../images/square-facebook-brands-solid.svg" alt="Icono de Facebook" loading="lazy"></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" title="Link de YouTube"><img src="../images/square-youtube-brands-solid.svg" alt="Icono de YouTube" loading="lazy"></a></li>
+                </ul>
+            </section>
+        </footer>
+    </div>
+    <script defer src="../js/toggler.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>

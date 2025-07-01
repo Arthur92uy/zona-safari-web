@@ -1,0 +1,74 @@
+@use "../abstracts/variables" as *;
+@use "../base/paletas" as *;
+@use "../abstracts/mixins.scss" as *;
+
+/* Estilos del Main Contacto y sus componentes */
+
+.login {
+    @include contenedor-secciones($border-negro)
+}
+
+.login {
+    background-color: $bg-seccion-main-2-0150;
+    color: $texto-seccion-main-2-0150;
+    .titulo {
+        text-decoration: underline;
+        padding: $padding10;
+        text-align: center;
+    }
+    .form {
+        border: $border-blanco;
+        border-radius:$radius5;
+        padding: $padding10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        .formulario-login {
+            display: grid;
+            width: 80%;
+            grid-template-areas: 
+            'text1 text1'
+            'text2 text2'
+            'button1 button2';
+            gap: 20px;
+            padding: 20px;
+            border: none;
+            .label1 {
+                grid-area: label1;
+            }
+            .label2 {
+                grid-area: label2;
+            }
+            .text1 {
+                grid-area: text1;
+            }
+            .text2 {
+                grid-area: text2;
+            }
+            .button1{
+                @include boton-contacto(button1, flex-end, 0);
+                input {
+                    @include boton-1($color-destacar-0150, $border-blanco, $texto-seccion-main-2-0150, $radius5, 152px);
+                }
+            }
+            .button2{
+                @include boton-contacto(button2, flex-start, 0);
+                input {
+                    @include boton-1($color-destacar-0150, $border-blanco, $texto-seccion-main-2-0150, $radius5, 152px);
+                }
+            }
+            .formato-input {
+                width: 100%;
+                height: 38px;
+                font-size: $font-size-base;
+                font-family: $font-family-base;
+                color: $texto-seccion-main-1-0150;
+                border: $border-blanco;
+                border-radius: $radius5;
+                padding: 5px;
+            }
+        }
+    }
+}
+
