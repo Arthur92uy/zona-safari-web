@@ -31,14 +31,14 @@
             'text1 text1'
             'text2 text2'
             'button1 button2';
-            gap: 20px;
+            gap: 15px;
             padding: 20px;
             border: none;
-            .label1 {
-                grid-area: label1;
-            }
-            .label2 {
-                grid-area: label2;
+            #mensaje-email, #mensaje-password {
+                font-size: xx-small;
+                color: red;
+                padding: 0;
+                margin: 0;
             }
             .text1 {
                 grid-area: text1;
@@ -68,6 +68,9 @@
                 border-radius: $radius5;
                 padding: 5px;
             }
+            .formato-input::placeholder {
+                    color: $texto-seccion-main-1-0150;
+                }
         }
     }
 }
