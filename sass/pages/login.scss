@@ -16,7 +16,7 @@
         padding: $padding10;
         text-align: center;
     }
-    .form {
+    .form-login {
         border: $border-blanco;
         border-radius:$radius5;
         padding: $padding10;
@@ -26,8 +26,10 @@
         width: 80%;
         .formulario-login {
             display: grid;
-            width: 80%;
+            grid-template-columns: 1fr 1fr;
+            width: 90%;
             grid-template-areas: 
+            'iniciar-sesion iniciar-sesion'
             'text1 text1'
             'text2 text2'
             'button1 button2';
@@ -35,16 +37,29 @@
             padding: 20px;
             border: none;
             #mensaje-email, #mensaje-password {
-                font-size: xx-small;
+                font-size: x-small;
                 color: red;
                 padding: 0;
                 margin: 0;
+            }
+            .iniciar-sesion{
+                grid-area: iniciar-sesion;
+            }
+            .iniciar-sesion p, .registrarse p {
+                text-align: center;
+                font-weight: bold;
             }
             .text1 {
                 grid-area: text1;
             }
             .text2 {
                 grid-area: text2;
+            }
+            .text1, .text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
             }
             .button1{
                 @include boton-contacto(button1, flex-end, 0);
@@ -60,6 +75,7 @@
             }
             .formato-input {
                 width: 100%;
+                max-width: 450px;
                 height: 38px;
                 font-size: $font-size-base;
                 font-family: $font-family-base;
@@ -69,9 +85,75 @@
                 padding: 5px;
             }
             .formato-input::placeholder {
-                    color: $texto-seccion-main-1-0150;
-                }
+                color: $texto-seccion-main-1-0150;
+            }
+            // .active {
+            //     display: flex;
+            // }
+            // .inactive {
+            //     display: none;
+            // }
         }
+        .formulario-login.sing-up {
+            grid-template-areas:
+            'registrarse registrarse'
+            'text3 text4'
+            'text5 text6'
+            'text7 text8'
+            'text9 text9'
+            'button3 button4';
+            // #mensaje-email, #mensaje-password {
+            //     font-size: x-small;
+            //     color: red;
+            //     padding: 0;
+            //     margin: 0;
+            // }
+            .registrarse{
+                grid-area: registrarse;
+            }
+            .text3 {
+                grid-area: text3;
+            }
+            .text4 {
+                grid-area: text4;
+            }
+            .text5 {
+                grid-area: text5;
+            }
+            .text6 {
+                grid-area: text6;
+            }
+            .text7 {
+                grid-area: text7;
+            }
+            .text8 {
+                grid-area: text8;
+            }
+            .text9 {
+                grid-area: text9;
+            }
+            .button3 {
+                @include boton-contacto(button3, flex-end, 0);
+                input {
+                    @include boton-1($color-destacar-0150, $border-blanco, $texto-seccion-main-2-0150, $radius5, 152px);
+                }
+            }
+            .button4 {
+                @include boton-contacto(button4, flex-start, 0);
+                input {
+                    @include boton-1($color-destacar-0150, $border-blanco, $texto-seccion-main-2-0150, $radius5, 152px);
+                }
+            }
+        // .active {
+        //     display: flex;
+        // }
+        // .inactive {
+        //     display: none;
+        // }
+        }
+    }
+    .inactive {
+        display: none !important;
     }
 }
 

@@ -78,20 +78,18 @@
             </section>
             <section class="login">
                 <div class="titulo">
-                    <h1>Inicio de sesión</h1>
+                    <h1 id="titulo-login">"Hola otra vez entrenador!"</h1>
                 </div>
-                <form action="" method="" class="form" name="login">
+
+                <section class="iniciar-sesion inactive">
+                        <p>Si ya tienes cuenta <a class="iniciar-sesion-a">INICIA SESIÓN AQUÍ</a></p>
+                </section>
+                <form action="" method="" class="form-login active" name="login" >
                     <fieldset class="formulario-login">
-                        <!-- <section class="label1">
-                            <label for="email">Correo electrónico/ Nickname:</label>
-                        </section> -->
                         <section class="text1">
                             <input type="email" id="email" name="email" class="formato-input" placeholder="Correo electrónico">
                             <p id="mensaje-email"></p>
                         </section>
-                        <!-- <section class="label2">
-                            <label for="email">Contraseña:</label>
-                        </section> -->
                         <section class="text2">
                             <input type="password" id="password" name="password" class="formato-input" placeholder="Contraseña">
                             <p id="mensaje-password"></p>
@@ -104,6 +102,70 @@
                         </section>
                     </fieldset>
                 </form>
+
+                <section class="registrarse active">
+                        <p>Si aun no tienes cuenta <a class="registrarse-a">REGISTRATE AQUÍ</a></p>
+                </section>
+                <form action="" method="" class="form-login inactive" name="sing-up">
+                    <fieldset class="formulario-login sing-up">
+                        <section class="text3">
+                            <input type="email" id="email-sing-up" name="email" class="formato-input" placeholder="Correo electrónico">
+                            <p id="mensaje-email-sing-up"></p>
+                        </section>
+                        <section class="text4">
+                            <input type="password" id="password-sing-up" name="password" class="formato-input" placeholder="Contraseña">
+                            <p id="mensaje-password-sing-up"></p>
+                        </section>
+                        <section class="text5">
+                            <input type="text" id="nickname-sing-up" name="nickname" class="formato-input" placeholder="Nickname">
+                            <p id="mensaje-nickname-sing-up"></p>
+                        </section>
+                        <section class="text6">
+                            <input type="date" id="date" name="date" class="formato-input" value="1996-10-20" max="2015-07-01" min="1925-07-01" title="Fecha de Nacimiento">
+                            <p id="mensaje-date-sing-up"></p>
+                        </section>
+                        <section class="text7">
+                            <input type="tel" id="tel-sing-up" name="tel" class="formato-input" pattern="^\+598\s?\d{2,3}\s?\d{3}\s?\d{3}$" required placeholder="+598 99 099 099">
+                            <p id="mensaje-tel-sing-up"></p>
+                        </section>
+                        <section class="text8">
+                            <select name="departamento" id="departamento" title="Departamento" class="formato-input">
+                                <option value="" selected>-- Seleccioná un departamento --</option>
+                                <option value="artigas">Artigas</option>
+                                <option value="canelones">Canelones</option>
+                                <option value="cerro-largo">Cerro Largo</option>
+                                <option value="colonia">Colonia</option>
+                                <option value="durazno">Durazno</option>
+                                <option value="flores">Flores</option>
+                                <option value="florida">Florida</option>
+                                <option value="lavalleja">Lavalleja</option>
+                                <option value="maldonado">Maldonado</option>
+                                <option value="montevideo">Montevideo</option>
+                                <option value="paysandu">Paysandú</option>
+                                <option value="rio-negro">Río Negro</option>
+                                <option value="rivera">Rivera</option>
+                                <option value="rocha">Rocha</option>
+                                <option value="salto">Salto</option>
+                                <option value="san-jose">San José</option>
+                                <option value="soriano">Soriano</option>
+                                <option value="tacuarembo">Tacuarembó</option>
+                                <option value="treinta-y-tres">Treinta y Tres</option>
+                            </select>
+                            <p id="mensaje-departamento-sing-up"></p>
+                        </section>
+                        <section class="text9">
+                            <input type="text" id="direccion-sing-up" name="direccion" class="formato-input" placeholder="Pueblo Paleta 1234">
+                            <p id="mensaje-direccion-sing-up"></p>
+                        </section>
+                        <section class="button3">
+                            <input type="submit" value="Registrarse" id="enviar-sing-up">
+                        </section>
+                        <section class="button4">
+                            <input type="reset" value="Limpiar" id="limpiar-sing-up">
+                        </section>
+                    </fieldset>
+                </form>
+
             </section>
         </main>
         <footer class="footer">

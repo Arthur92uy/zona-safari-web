@@ -436,7 +436,7 @@ p {
   padding: 10px;
   text-align: center;
 }
-.login .form {
+.login .form-login {
   border: 1px solid white;
   border-radius: 5px;
   padding: 10px;
@@ -445,33 +445,47 @@ p {
   align-items: center;
   width: 80%;
 }
-.login .form .formulario-login {
+.login .form-login .formulario-login {
   display: grid;
-  width: 80%;
-  grid-template-areas: "text1 text1" "text2 text2" "button1 button2";
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  grid-template-areas: "iniciar-sesion iniciar-sesion" "text1 text1" "text2 text2" "button1 button2";
   gap: 15px;
   padding: 20px;
   border: none;
 }
-.login .form .formulario-login #mensaje-email, .login .form .formulario-login #mensaje-password {
-  font-size: xx-small;
+.login .form-login .formulario-login #mensaje-email, .login .form-login .formulario-login #mensaje-password {
+  font-size: x-small;
   color: red;
   padding: 0;
   margin: 0;
 }
-.login .form .formulario-login .text1 {
+.login .form-login .formulario-login .iniciar-sesion {
+  grid-area: iniciar-sesion;
+}
+.login .form-login .formulario-login .iniciar-sesion p, .login .form-login .formulario-login .registrarse p {
+  text-align: center;
+  font-weight: bold;
+}
+.login .form-login .formulario-login .text1 {
   grid-area: text1;
 }
-.login .form .formulario-login .text2 {
+.login .form-login .formulario-login .text2 {
   grid-area: text2;
 }
-.login .form .formulario-login .button1 {
+.login .form-login .formulario-login .text1, .login .form-login .formulario-login .text2, .login .form-login .formulario-login .text3, .login .form-login .formulario-login .text4, .login .form-login .formulario-login .text5, .login .form-login .formulario-login .text6, .login .form-login .formulario-login .text7, .login .form-login .formulario-login .text8, .login .form-login .formulario-login .text9 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login .form-login .formulario-login .button1 {
   grid-area: button1;
   display: flex;
   justify-content: flex-end;
   padding: 0;
 }
-.login .form .formulario-login .button1 input {
+.login .form-login .formulario-login .button1 input {
   background-color: #B58BAF;
   border: 1px solid white;
   color: #ffffff;
@@ -485,13 +499,13 @@ p {
   height: 2rem;
   font-size: 1rem;
 }
-.login .form .formulario-login .button2 {
+.login .form-login .formulario-login .button2 {
   grid-area: button2;
   display: flex;
   justify-content: flex-start;
   padding: 0;
 }
-.login .form .formulario-login .button2 input {
+.login .form-login .formulario-login .button2 input {
   background-color: #B58BAF;
   border: 1px solid white;
   color: #ffffff;
@@ -505,8 +519,9 @@ p {
   height: 2rem;
   font-size: 1rem;
 }
-.login .form .formulario-login .formato-input {
+.login .form-login .formulario-login .formato-input {
   width: 100%;
+  max-width: 450px;
   height: 38px;
   font-size: 1rem;
   font-family: "Roboto Flex", sans-serif;
@@ -515,8 +530,78 @@ p {
   border-radius: 5px;
   padding: 5px;
 }
-.login .form .formulario-login .formato-input::placeholder {
+.login .form-login .formulario-login .formato-input::placeholder {
   color: #C292BA;
+}
+.login .form-login .formulario-login.sing-up {
+  grid-template-areas: "registrarse registrarse" "text3 text4" "text5 text6" "text7 text8" "text9 text9" "button3 button4";
+}
+.login .form-login .formulario-login.sing-up .registrarse {
+  grid-area: registrarse;
+}
+.login .form-login .formulario-login.sing-up .text3 {
+  grid-area: text3;
+}
+.login .form-login .formulario-login.sing-up .text4 {
+  grid-area: text4;
+}
+.login .form-login .formulario-login.sing-up .text5 {
+  grid-area: text5;
+}
+.login .form-login .formulario-login.sing-up .text6 {
+  grid-area: text6;
+}
+.login .form-login .formulario-login.sing-up .text7 {
+  grid-area: text7;
+}
+.login .form-login .formulario-login.sing-up .text8 {
+  grid-area: text8;
+}
+.login .form-login .formulario-login.sing-up .text9 {
+  grid-area: text9;
+}
+.login .form-login .formulario-login.sing-up .button3 {
+  grid-area: button3;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+.login .form-login .formulario-login.sing-up .button3 input {
+  background-color: #B58BAF;
+  border: 1px solid white;
+  color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  width: 152px;
+  height: 2rem;
+  font-size: 1rem;
+}
+.login .form-login .formulario-login.sing-up .button4 {
+  grid-area: button4;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+.login .form-login .formulario-login.sing-up .button4 input {
+  background-color: #B58BAF;
+  border: 1px solid white;
+  color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  width: 152px;
+  height: 2rem;
+  font-size: 1rem;
+}
+.login .inactive {
+  display: none !important;
 }
 
 /* Estilos del main catalogo y sus componentes */
